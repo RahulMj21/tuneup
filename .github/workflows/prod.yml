@@ -16,7 +16,7 @@ jobs:
                 shell: bash
         strategy:
             matrix:
-                node-version: ['18.x']
+                node-version: ["18.x"]
         steps:
             - uses: actions/checkout@v2
             - name: Install Vercel CLI
