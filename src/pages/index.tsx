@@ -1,7 +1,7 @@
-import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 
 const Home = () => {
     return (
@@ -9,15 +9,15 @@ const Home = () => {
             <Box
                 sx={{
                     my: 4,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    gap: '1rem',
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: "1rem",
                 }}
             >
                 <Typography variant="h4" component="h1" gutterBottom>
-                    Radha Radha ❣️ Shyam Shyam
+                    🙏Radha Radha ❣️ Shyam Shyam🙏
                 </Typography>
                 <Button variant="contained" color="warning">
                     Radha
@@ -39,6 +39,6 @@ const Home = () => {
                 </Button>
             </Box>
         </Container>
-    )
-}
-export default Home
+    );
+};
+export default Home;
