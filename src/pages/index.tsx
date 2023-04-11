@@ -20,19 +20,19 @@ const Home = () => {
                     🙏Radha Radha ❣️ Shyam Shyam🙏
                 </Typography>
                 <Button variant="contained" color="warning">
-                    Radha
+                    Radha Radha
                 </Button>
                 <Button variant="contained" color="info">
-                    Radha
+                    Radha Radha
                 </Button>
                 <Button variant="contained" color="error">
-                    Radha
+                    Radha Radha
                 </Button>
                 <Button variant="contained" color="primary">
-                    Radha
+                    Radha Radha
                 </Button>
                 <Button variant="contained" color="secondary">
-                    Radha
+                    Radha Radha
                 </Button>
                 <Button variant="contained" color="error">
                     Radha Radha
