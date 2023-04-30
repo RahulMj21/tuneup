@@ -1,47 +1,8 @@
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-
 const Home = () => {
     return (
-        <Container maxWidth="lg">
-            <Box
-                sx={{
-                    my: 4,
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "1rem",
-                }}
-            >
-                <Typography variant="h4" component="h1" gutterBottom>
-                    🙏Radha Radha ❣️ Shyam Shyam🙏
-                </Typography>
-                <Button variant="contained" color="warning">
-                    Radha Radha
-                </Button>
-                <Button variant="contained" color="info">
-                    Radha Radha
-                </Button>
-                <Button variant="contained" color="error">
-                    Radha Radha
-                </Button>
-                <Button variant="contained" color="primary">
-                    Radha Radha
-                </Button>
-                <Button variant="contained" color="secondary">
-                    Radha Radha
-                </Button>
-                <Button variant="contained" color="error">
-                    Radha Radha
-                </Button>
-                <Button variant="contained" color="error">
-                    Radha Radha
-                </Button>
-            </Box>
-        </Container>
+        <div>
+            <h1>Radhe Shyam</h1>
+        </div>
     );
 };
 export default Home;
