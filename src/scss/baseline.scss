@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*:focus-visible {
+    outline: 0.3rem solid orange;
+    box-shadow: 0.1px 0.1px 7px orange, -0.1px -0.1px 7px orange;
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: $color-dark-1;
+    color: $color-light-2;
+}
+
+p {
+    font-size: 1.6rem;
+    color: $color-light-3;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: $medium;
+}
+
+h2 {
+    font-size: 2.8rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: $medium;
+}
+
+h3 {
+    font-size: 2.4rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: $medium;
+}
+
+h4 {
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: $medium;
+}
+
+h5 {
+    font-size: 1.8rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: $medium;
+}
+
+button,
+input,
+textarea {
+    border: 0;
+    outline: 0;
+    font-family: inherit;
+    font-size: 1.6rem;
+}
