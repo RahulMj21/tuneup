@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 const Logo = () => {
     return (
-        <a href="#" className="cursor-pointer">
+        <Link href="/" className="cursor-pointer">
             <h1>Logo</h1>
-        </a>
+        </Link>
     );
 };
 

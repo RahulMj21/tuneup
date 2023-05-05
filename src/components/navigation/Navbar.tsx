@@ -23,7 +23,7 @@ const Navbar = () => {
     return (
         <nav
             onMouseLeave={handleMouseLeave}
-            className="flex items-center uppercase relative"
+            className="flex items-center relative"
         >
             {LINKS.map(({ href, text }) => (
                 <Link
