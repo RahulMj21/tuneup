@@ -4,6 +4,9 @@ module.exports = {
     darkMode: "class",
     theme: {
         extend: {
+            container: {
+                center: true,
+            },
             screens: {
                 sm: "640px",
                 md: "768px",
@@ -16,7 +19,8 @@ module.exports = {
                 "color-dark-2": "var(--color-dark-2)",
                 "color-light-1": "var(--color-light-1)",
                 "color-light-2": "var(--color-light-2)",
-                "color-light-3": "var(--color-light-3)",
+                "color-gray-1": "var(--color-gray-1)",
+                "color-gray-2": "var(--color-gray-2)",
                 "color-pink-1": "var(--color-pink-1)",
                 "color-pink-2": "var(--color-pink-2)",
             },
