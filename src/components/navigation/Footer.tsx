@@ -1,10 +1,17 @@
+"use client";
+import { usePathname } from "next/navigation";
+
 const Footer = () => {
-    return (
+    const path = usePathname();
+
+    return path !== "/dashboard" ? (
         <footer className="border-t border-gray-900">
             <div className="custom-container flex justify-center p-4">
-                This is footer
+                Radhe❣️Shyam
             </div>
         </footer>
+    ) : (
+        <></>
     );
 };
 

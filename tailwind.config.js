@@ -23,6 +23,7 @@ module.exports = {
                 "color-gray-2": "var(--color-gray-2)",
                 "color-pink-1": "var(--color-pink-1)",
                 "color-pink-2": "var(--color-pink-2)",
+                "color-blue-1": "var(--color-blue-1)",
             },
             fontWeight: {
                 light: "var(--light)",

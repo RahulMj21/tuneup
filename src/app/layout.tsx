@@ -1,18 +1,20 @@
 import "@/app/globals.css";
 import Footer from "@/components/navigation/Footer";
 import Header from "@/components/navigation/Header";
+import { Open_Sans, Roboto } from "next/font/google";
 import { ReactNode } from "react";
-import { Roboto, Open_Sans } from "next/font/google";
 
 const roboto = Roboto({
     weight: ["300", "400", "500", "700"],
     subsets: ["latin"],
     variable: "--font-roboto",
+    display: "swap",
 });
-const openSans = Open_Sans({
+const open_sans = Open_Sans({
     weight: ["400", "500", "600", "700"],
     subsets: ["latin"],
     variable: "--font-open-sans",
+    display: "swap",
 });
 
 export const metadata = {
@@ -26,9 +28,9 @@ interface Props {
 
 const BaseLayout = ({ children }: Props) => {
     return (
-        <html lang="en" className={`${roboto.variable} ${openSans.variable}`}>
+        <html lang="en" className={`${roboto.variable} ${open_sans.variable}`}>
             <body>
-                <div className="min-h-screen">
+                <div className="min-h-screen w-full overflow-x-hidden">
                     <Header />
                     <main className="min-h-[calc(100vh-6rem)]">{children}</main>
                     <Footer />

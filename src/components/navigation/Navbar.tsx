@@ -31,9 +31,9 @@ const Navbar = () => {
                     key={text}
                     href={href}
                     onMouseOver={handleMouseOver}
-                    className={`px-4 py-1 rounded-sm hover:text-color-light-2 transition-none ${
+                    className={`relative px-4 py-1 rounded-sm hover:text-color-light-2 transition-none ${
                         path === href
-                            ? "text-color-light-2"
+                            ? "text-color-light-1"
                             : "text-color-gray-1"
                     }`}
                 >
