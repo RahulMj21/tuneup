@@ -23,6 +23,14 @@ module.exports = {
                 "color-gray-2": "var(--color-gray-2)",
                 "color-pink-1": "var(--color-pink-1)",
                 "color-pink-2": "var(--color-pink-2)",
+                "color-blue-1": "var(--color-blue-1)",
+            },
+            fontWeight: {
+                light: "var(--light)",
+                normal: "var(--normal)",
+                medium: "var(--medium)",
+                semibold: "var(--semibold)",
+                bold: "var(--bold)",
             },
             fontFamily: {
                 roboto: ["Roboto", "sans-serif"],

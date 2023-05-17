@@ -1,20 +1,19 @@
-import { LinkButton } from "@/components/styled/Button";
 import Logo from "@/components/navigation/Logo";
 import Navbar from "@/components/navigation/Navbar";
 import { FaArrowRight } from "react-icons/fa";
-import { CustomContainer } from "@/components/styled/Layout";
+import Link from "next/link";
 
 const Header = () => {
     return (
-        <header className="border-b border-gray-900">
-            <CustomContainer className="flex items-center justify-between gap-8 py-6">
+        <header title="header" className="border-b border-gray-900">
+            <div className="custom-container flex items-center justify-between gap-8 h-[6rem]">
                 <Logo />
                 <Navbar />
-                <LinkButton href="#" variant="hollow" className="group">
+                <Link href="#" className="group btn btn-hollow cursor-pointer">
                     Get Started
-                    <FaArrowRight className="custon-button-svg" />
-                </LinkButton>
-            </CustomContainer>
+                    <FaArrowRight className="custom-button-svg" />
+                </Link>
+            </div>
         </header>
     );
 };
