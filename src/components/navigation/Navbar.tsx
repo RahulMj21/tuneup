@@ -1,10 +1,11 @@
+"use client";
 import { LINKS } from "@/utils/constants";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { MouseEvent, useRef } from "react";
 
 const Navbar = () => {
-    const router = useRouter();
+    const path = usePathname();
     const markerRef = useRef<HTMLDivElement | null>(null);
 
     const handleMouseOver = (e: MouseEvent<HTMLAnchorElement>) => {
@@ -30,9 +31,9 @@ const Navbar = () => {
                     key={text}
                     href={href}
                     onMouseOver={handleMouseOver}
-                    className={`px-4 py-1 rounded-sm hover:text-color-light-2 transition-none ${
-                        router.pathname === href
-                            ? "text-color-light-2"
+                    className={`relative px-4 py-1 rounded-sm hover:text-color-light-2 transition-none ${
+                        path === href
+                            ? "text-color-light-1"
                             : "text-color-gray-1"
                     }`}
                 >
@@ -41,7 +42,7 @@ const Navbar = () => {
             ))}
             <div
                 ref={markerRef}
-                className="absolute z-[-1] h-8 rounded-md bg-color-dark-2 transition-all pointer-events-none"
+                className="absolute z-[-1] h-[2.25rem] rounded-md bg-color-dark-2 transition-all pointer-events-none"
             />
         </nav>
     );

@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* colors */
+    --color-dark-1: #000000;
+    --color-dark-2: #1d1f20;
+    --color-light-1: #fefefe;
+    --color-light-2: #eceef0;
+    --color-gray-1: #6f747b;
+    --color-gray-2: #53575d;
+    --color-error-1: #ec515c;
+    --color-error-2: #e25a63;
+    --color-blue-1: #3b82f6;
+
+    /* font-weight */
+    --light: 300;
+    --normal: 400;
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+}
+
+body {
+    font-family: var(--font-open-sans), sans-serif;
+    background-color: var(--color-dark-1);
+    color: var(--color-light-2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--font-roboto), sans-serif;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: var(--medium);
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: var(--medium);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: var(--medium);
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: var(--medium);
+}
+
+h5 {
+    font-size: 1.125rem;
+    font-weight: var(--medium);
+}
+
+p {
+    font-family: var(--font-open-sans);
+    color: var(--color-gray-1);
+    letter-spacing: 0.4px;
+}
+
+::-webkit-scrollbar {
+    width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-dark-2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-gray-2);
+    border-radius: 0.5rem;
+}
+
+@layer components {
+    .focus-style {
+        @apply outline-none ring-4 ring-pink-500 ring-opacity-50;
+    }
+}
+
+/* general */
+.custom-container {
+    @apply container w-[90%] max-w-7xl;
+}
+
+.btn {
+    @apply flex items-center gap-2 px-4 py-2 transform duration-200 rounded-full bg-color-light-2 text-color-dark-1 font-medium border-2 border-transparent whitespace-nowrap focus-visible:focus-style hover:shadow-lg active:scale-[0.98];
+}
+.btn-hollow {
+    @apply bg-transparent text-color-light-2 border-current border-[1.5px] border-opacity-50;
+}
+
+.custom-button-svg {
+    @apply transform group-hover:translate-x-1 transition-all;
+}
+
+/* home page */
+.hero-heading {
+    @apply text-[11.5vw] leading-[11.5vw] font-normal whitespace-nowrap;
+}
