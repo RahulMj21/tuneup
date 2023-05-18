@@ -103,5 +103,5 @@ p {
 
 /* home page */
 .hero-heading {
-    @apply text-[11.5vw] leading-[11.5vw] font-normal whitespace-nowrap;
+    @apply text-[12.5vw] xl:text-[10rem] leading-[12.5vw] xl:leading-[10rem] font-normal whitespace-nowrap;
 }
