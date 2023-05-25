@@ -3,4 +3,4 @@
 
 echo "🚀 Testing and 🔎 Searching for mistakes in your code."
 npx lint-staged
-echo "✅✅✅ Well done🎊 No Errors ✨ Accepting your PR This Time ✅✅❤️‍🔥"
+echo "✅✅✅ Well done🎊 No Errors ✨ Accepting your Commit This Time ✅✅❤️"

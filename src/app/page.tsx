@@ -4,8 +4,6 @@ import { FaArrowRight } from "react-icons/fa";
 const HomePage = () => {
     return (
         <section title="Home" className="relative w-full pt-16 ">
-            <div className="absolute right-0 top-0 -z-40 h-[20vw] w-[20vw] bg-gradient-to-r from-color-blue-1 to-pink-500 blur-[4.5vw] rounded-full" />
-            <div className="absolute left-0 bottom-[2rem] -z-40 h-[14vw] w-[14vw] bg-gradient-to-r  from-pink-700 to-color-blue-1 blur-[5.5vw] rounded-full" />
             <div className="w-full custom-container gap-8 flex flex-col items-center">
                 <div>
                     <h1 className="hero-heading text-center lg:text-left">
@@ -25,7 +23,7 @@ const HomePage = () => {
                     style={{ paddingInline: "1.5rem" }}
                 >
                     Get Started
-                    <FaArrowRight className="custom-button-svg" />
+                    <FaArrowRight className="text-[1.15rem] custom-button-svg" />
                 </Link>
             </div>
         </section>

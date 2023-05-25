@@ -2,81 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    /* colors */
-    --color-dark-1: #000000;
-    --color-dark-2: #1d1f20;
-    --color-light-1: #fefefe;
-    --color-light-2: #eceef0;
-    --color-gray-1: #6f747b;
-    --color-gray-2: #53575d;
-    --color-error-1: #ec515c;
-    --color-error-2: #e25a63;
-    --color-blue-1: #3b82f6;
+@layer base {
+    :root {
+        /* colors */
+        --color-dark-1: #000000;
+        --color-dark-2: #1d1f20;
+        --color-light-1: #fefefe;
+        --color-light-2: #eceef0;
+        --color-gray-1: #6f747b;
+        --color-gray-2: #53575d;
+        --color-error-1: #ec515c;
+        --color-error-2: #e25a63;
+        --color-blue-1: #3b82f6;
 
-    /* font-weight */
-    --light: 300;
-    --normal: 400;
-    --medium: 500;
-    --semibold: 600;
-    --bold: 700;
+        /* font-weight */
+        --light: 300;
+        --normal: 400;
+        --medium: 500;
+        --semibold: 600;
+        --bold: 700;
+    }
 }
 
-body {
-    font-family: var(--font-open-sans), sans-serif;
-    background-color: var(--color-dark-1);
-    color: var(--color-light-2);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: var(--font-roboto), sans-serif;
-}
-h1 {
-    font-size: 2rem;
-    font-weight: var(--medium);
-}
-
-h2 {
-    font-size: 1.75rem;
-    font-weight: var(--medium);
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-weight: var(--medium);
-}
-
-h4 {
-    font-size: 1.25rem;
-    font-weight: var(--medium);
-}
-
-h5 {
-    font-size: 1.125rem;
-    font-weight: var(--medium);
-}
-
-p {
-    font-family: var(--font-open-sans);
-    color: var(--color-gray-1);
-    letter-spacing: 0.4px;
-}
-
-::-webkit-scrollbar {
-    width: 0.625rem;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--color-dark-2);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--color-gray-2);
-    border-radius: 0.5rem;
+@layer base {
+    body {
+        @apply font-open-sans bg-color-dark-1 text-color-light-2;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        @apply font-roboto font-medium;
+    }
+    h1 {
+        @apply text-[2rem];
+    }
+    h2 {
+        @apply text-[1.75rem];
+    }
+    h3 {
+        @apply text-[1.5rem];
+    }
+    h4 {
+        @apply text-[1.25rem];
+    }
+    h5 {
+        @apply text-[1.125rem];
+    }
+    p {
+        @apply text-color-gray-1 tracking-[0.4px];
+    }
+    ::-webkit-scrollbar {
+        @apply w-[0.625rem];
+    }
+    ::-webkit-scrollbar-track {
+        @apply bg-color-dark-2;
+    }
+    ::-webkit-scrollbar-thumb {
+        @apply bg-color-gray-2;
+    }
 }
 
 @layer components {
@@ -104,4 +89,44 @@ p {
 /* home page */
 .hero-heading {
     @apply text-[12.5vw] xl:text-[10rem] leading-[12.5vw] xl:leading-[10rem] font-normal whitespace-nowrap;
+}
+
+.blob-bg {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(7.2rem);
+    z-index: -2;
+}
+
+.blob {
+    position: absolute;
+    height: 22rem;
+    width: 22rem;
+    background: linear-gradient(to right, #0d6e4e, #2d1857, #222278, #7e5514);
+    background-size: 250%;
+    background-position: 0 0;
+    border-radius: 50%;
+    translate: -50% -50%;
+    top: 50%;
+    left: 50%;
+    animation: animate-bg 20s linear infinite;
+    z-index: -3;
+}
+
+@keyframes animate-bg {
+    0% {
+        background-position: 0 0;
+        rotate: 0deg;
+    }
+    50% {
+        background-position: 100% 200%;
+        scale: 1 1.5;
+    }
+    100% {
+        background-position: 0 0;
+        rotate: 360deg;
+    }
 }

@@ -5,7 +5,10 @@ import Link from "next/link";
 
 const Header = () => {
     return (
-        <header title="header" className="border-b border-gray-900">
+        <header
+            title="header"
+            className="border-b border-gray-900 backdrop-blur-[7rem]"
+        >
             <div className="custom-container flex items-center justify-between gap-8 h-[6rem]">
                 <Logo />
                 <Navbar />
