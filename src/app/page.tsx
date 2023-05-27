@@ -1,9 +1,11 @@
-import Link from "next/link";
+import Blob from "@/components/common/Blob";
+import LinkButton from "@/components/ui/LinkButton";
 import { FaArrowRight } from "react-icons/fa";
 
 const HomePage = () => {
     return (
         <section title="Home" className="relative w-full pt-16 ">
+            <Blob />
             <div className="w-full custom-container gap-8 flex flex-col items-center">
                 <div>
                     <h1 className="hero-heading text-center lg:text-left">
@@ -17,14 +19,10 @@ const HomePage = () => {
                     Utilize each day with the best Screen Time software
                     available globally.
                 </p>
-                <Link
-                    href="/"
-                    className="btn group text-[1.25rem]"
-                    style={{ paddingInline: "1.5rem" }}
-                >
+                <LinkButton href="/" className="text-[1.25rem] px-[1.5rem]">
                     Get Started
-                    <FaArrowRight className="text-[1.15rem] custom-button-svg" />
-                </Link>
+                    <FaArrowRight className="button-svg text-[1.15rem]" />
+                </LinkButton>
             </div>
         </section>
     );
