@@ -1,7 +1,7 @@
 import Logo from "@/components/navigation/Logo";
 import Navbar from "@/components/navigation/Navbar";
+import LinkButton from "@/components/ui/LinkButton";
 import { FaArrowRight } from "react-icons/fa";
-import Link from "next/link";
 
 const Header = () => {
     return (
@@ -12,10 +12,10 @@ const Header = () => {
             <div className="custom-container flex items-center justify-between gap-8 h-[6rem]">
                 <Logo />
                 <Navbar />
-                <Link href="#" className="group btn btn-hollow cursor-pointer">
+                <LinkButton variant="outline" href="#">
                     Get Started
-                    <FaArrowRight className="custom-button-svg" />
-                </Link>
+                    <FaArrowRight className="button-svg" />
+                </LinkButton>
             </div>
         </header>
     );

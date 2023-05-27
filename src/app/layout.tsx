@@ -1,5 +1,4 @@
 import "@/app/globals.css";
-import Blob from "@/components/common/Blob";
 import Footer from "@/components/navigation/Footer";
 import Header from "@/components/navigation/Header";
 import { Open_Sans, Roboto } from "next/font/google";
@@ -31,7 +30,6 @@ const BaseLayout = ({ children }: Props) => {
     return (
         <html lang="en" className={`${roboto.variable} ${open_sans.variable}`}>
             <body>
-                <Blob />
                 <div className="min-h-screen w-full overflow-x-hidden">
                     <Header />
                     <main className="min-h-[calc(100vh-6rem)]">{children}</main>
