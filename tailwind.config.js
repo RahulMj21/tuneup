@@ -24,6 +24,9 @@ module.exports = {
                 "pink-1": "var(--color-pink-1)",
                 "pink-2": "var(--color-pink-2)",
                 "blue-1": "var(--color-blue-1)",
+                "blue-2": "var(--color-blue-2)",
+                "green-1": "var(--color-green-1)",
+                "green-2": "var(--color-green-2)",
             },
             fontWeight: {
                 light: "var(--light)",
@@ -35,6 +38,9 @@ module.exports = {
             fontFamily: {
                 roboto: ["Roboto", "sans-serif"],
                 "open-sans": ["Open Sans", "sans-serif"],
+            },
+            gridTemplateColumns: {
+                plan: "repeat(auto-fit, minmax(20rem, 1fr))",
             },
         },
     },
