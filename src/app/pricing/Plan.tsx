@@ -8,26 +8,34 @@ import CustomTooltip from "@/components/common/CustomTooltip";
 interface Props extends HTMLAttributes<HTMLDivElement> {
     isAnnual: boolean;
     plan: IPlan;
+    isPopular?: boolean;
 }
 
 const Plan = forwardRef<HTMLDivElement, Props>(
-    ({ isAnnual, plan, className, ...props }, ref) => {
+    ({ isAnnual, plan, isPopular, className, ...props }, ref) => {
         const { planTitle, tagline, cta, features } = plan;
         return (
             <div
                 ref={ref}
                 className={cn(
-                    "flex flex-col gap-5 w-full py-2 rounded-2xl border-[1px] border-gray-3",
+                    "relative flex flex-col gap-5 w-full pb-2 pt-6 rounded-2xl border-[1px] border-gray-3",
+                    isPopular &&
+                        "border-blue-2 shadow-[0_1px_33px_-15px_#3b9ff6]",
                     className
                 )}
                 {...props}
             >
+                {isPopular && (
+                    <div className="absolute bg-gradient-to-r from-blue-1 to-green-2 px-4 py-1 rounded-full left-1/2 top-0 translate-x-[-50%] translate-y-[-50%]">
+                        Popular
+                    </div>
+                )}
                 <div className="w-full flex flex-col items-center gap-3 py-5 px-4">
-                    <h1 className="text-center tracking-[1px] font-semibold">
+                    <h1 className="text-center tracking-[1px] font-semibold text-[2.2rem]">
                         {planTitle}
                     </h1>
                     <p className="text-center text-[1.125rem]">{tagline}</p>
-                    <h1 className="text-center text-[3.7rem] leading-[3.7rem] my-2">
+                    <h1 className="text-center text-[3.9rem] leading-[3.9rem] my-2">
                         $<span className="ml-1">0.0</span>
                     </h1>
                     <p className="text-center">{`per month${
@@ -62,7 +70,13 @@ const Plan = forwardRef<HTMLDivElement, Props>(
                     ))}
                 </div>
                 <div className="w-full py-8 px-5 border-t border-gray-3">
-                    <Button className="w-full justify-center text-[1.125rem] font-semibold">
+                    <Button
+                        className={cn(
+                            "w-full justify-center text-[1.125rem] font-semibold",
+                            isPopular &&
+                                "bg-gradient-to-r from-blue-1 to-green-2 text-light-1 shadow-[0_5px_45px_-15px_#3b9ff6] hover:shadow-[0_5px_60px_-15px_#3b9ff6]"
+                        )}
+                    >
                         {cta}
                     </Button>
                 </div>

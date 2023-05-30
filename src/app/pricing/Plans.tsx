@@ -36,7 +36,14 @@ const Plans = () => {
             </div>
             <div className="grid grid-cols-plan gap-10 my-8 w-full">
                 {PLAN_ITEMS.map((plan) => (
-                    <Plan key={plan.planTitle} {...{ isAnnual, plan }} />
+                    <Plan
+                        key={plan.planTitle}
+                        {...{
+                            isAnnual,
+                            plan,
+                            isPopular: plan.planTitle === "Pro",
+                        }}
+                    />
                 ))}
             </div>
         </>
