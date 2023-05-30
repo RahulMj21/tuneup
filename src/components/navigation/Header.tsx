@@ -1,7 +1,7 @@
 import Logo from "@/components/navigation/Logo";
 import Navbar from "@/components/navigation/Navbar";
 import LinkButton from "@/components/ui/LinkButton";
-import { FaArrowRight } from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
 
 const Header = () => {
     return (
@@ -14,7 +14,7 @@ const Header = () => {
                 <Navbar />
                 <LinkButton variant="outline" href="#">
                     Get Started
-                    <FaArrowRight className="button-svg" />
+                    <ArrowRight className="button-svg h-5 w-5" />
                 </LinkButton>
             </div>
         </header>
