@@ -1,6 +1,6 @@
 import Blob from "@/components/common/Blob";
 import LinkButton from "@/components/ui/LinkButton";
-import { FaArrowRight } from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
 
 const HomePage = () => {
     return (
@@ -21,7 +21,7 @@ const HomePage = () => {
                 </p>
                 <LinkButton href="/" className="text-[1.25rem] px-[1.5rem]">
                     Get Started
-                    <FaArrowRight className="button-svg text-[1.15rem]" />
+                    <ArrowRight className="button-svg text-[1.15rem]" />
                 </LinkButton>
             </div>
         </section>
