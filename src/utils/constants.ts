@@ -1,11 +1,19 @@
 import { IPlan } from "@/types";
 
+import {
+    Layers,
+    LayoutPanelLeft,
+    Banknote,
+    HeartHandshake,
+    Contact2,
+} from "lucide-react";
+
 export const LINKS = [
-    { text: "Home", href: "/" },
-    { text: "Dashboard", href: "/dashboard" },
-    { text: "Pricing", href: "/pricing" },
-    { text: "Support", href: "/support" },
-    { text: "Contact", href: "/contact" },
+    { text: "Home", href: "/", icon: Layers },
+    { text: "Dashboard", href: "/dashboard", icon: LayoutPanelLeft },
+    { text: "Pricing", href: "/pricing", icon: Banknote },
+    { text: "Support", href: "/support", icon: HeartHandshake },
+    { text: "Contact", href: "/contact", icon: Contact2 },
 ];
 
 export const PLAN_ITEMS: IPlan[] = [
