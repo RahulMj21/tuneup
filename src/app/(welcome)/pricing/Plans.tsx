@@ -1,10 +1,10 @@
 "use client";
 
 import Switch from "@/components/ui/Switch";
-import Plan from "@/app/pricing/Plan";
-import { useState } from "react";
 import { PLAN_ITEMS } from "@/utils/constants";
+import { useState } from "react";
 import Confetti from "react-dom-confetti";
+import Plan from "./Plan";
 
 const Plans = () => {
     const [isAnnual, setIsAnnual] = useState(false);

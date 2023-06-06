@@ -8,7 +8,7 @@ const Navbar = () => {
     const path = usePathname();
 
     return (
-        <nav className="flex items-center relative">
+        <nav className="hidden sm:flex items-center relative">
             {LINKS.map(({ href, text }) => (
                 <Link
                     key={text}
