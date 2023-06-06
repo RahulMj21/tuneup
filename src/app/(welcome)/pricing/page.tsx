@@ -1,4 +1,4 @@
-import Plans from "@/app/pricing/Plans";
+import Plans from "./Plans";
 
 const PricingPage = () => {
     return (
