@@ -64,7 +64,7 @@ const MobileNav = () => {
                             pathname === href && "text-light-2"
                         )}
                     >
-                        <div className="z-1">{icon}</div>
+                        {icon}
                     </Link>
                 ))}
             </div>
