@@ -10,7 +10,7 @@ import {
     Contact2,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { MouseEvent, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export const LINKS = [
     { text: "Home", href: "/", icon: <Home /> },
@@ -23,33 +23,22 @@ export const LINKS = [
 const MobileNav = () => {
     const pathname = usePathname();
     const barRef = useRef<HTMLDivElement>(null);
-
     const isHomePage = pathname === "/" || pathname === "/home";
 
-    const setBarPosition = (value: number) => {
-        if (barRef.current) {
-            barRef.current.style.left = `${value}px`;
-            barRef.current.style.opacity = "1";
-        }
-    };
-
-    const handleClick = (e: MouseEvent<HTMLDivElement>) => {
-        setBarPosition(e.currentTarget.offsetLeft);
-    };
-
     useEffect(() => {
-        if (typeof window !== "undefined") {
-            document.querySelectorAll(".link-mobile").forEach((item) => {
-                if (
-                    item instanceof HTMLAnchorElement &&
-                    item.href === window.location.href
-                ) {
-                    console.log("inside :", item.offsetLeft);
-                    setBarPosition(item.offsetLeft);
-                }
-            });
-        }
-    }, []);
+        document.querySelectorAll(".link-mobile").forEach((item) => {
+            if (
+                item instanceof HTMLAnchorElement &&
+                item.href === window.location.href &&
+                barRef.current
+            ) {
+                barRef.current.style.left = `${item.offsetLeft}px`;
+                barRef.current.style.opacity = "1";
+            }
+        });
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [pathname]);
 
     return (
         <nav
@@ -75,9 +64,7 @@ const MobileNav = () => {
                             pathname === href && "text-light-2"
                         )}
                     >
-                        <div className="z-1" onClick={handleClick}>
-                            {icon}
-                        </div>
+                        {icon}
                     </Link>
                 ))}
             </div>
