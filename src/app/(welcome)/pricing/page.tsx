@@ -1,5 +1,7 @@
 import Plans from "./Plans";
 
+export const runtime = "edge";
+
 const PricingPage = () => {
     return (
         <main

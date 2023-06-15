@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 const DashboardPage = () => {
     return (
         <section title="dashboard">
