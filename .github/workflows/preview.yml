@@ -40,7 +40,7 @@ jobs:
               uses: actions/checkout@v3
 
             - name: Build
-              uses: npx @cloudflare/next-on-pages@1
+              run: npx @cloudflare/next-on-pages@1
 
             - name: Publish to Cloudflare Pages
               uses: cloudflare/pages-action@v1
