@@ -1,0 +1,29 @@
+name: CF Prod Deployment
+on:
+    pull_request:
+        types: [closed]
+        branches:
+            - main
+jobs:
+    publish:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            deployments: write
+        name: Publish to Cloudflare Pages
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Build
+              run: npx @cloudflare/next-on-pages@1
+
+            - name: Publish to Cloudflare Pages
+              uses: cloudflare/pages-action@v1
+              with:
+                  apiToken: ${{ secrets.CF_API_TOKEN }}
+                  accountId: ${{ secrets.CF_ACCOUNT_ID }}
+                  projectName: ${{ secrets.CF_PROJECT_NAME }}
+                  directory: .vercel/output/static
+                  branch: main
+                  wranglerVersion: "3"
