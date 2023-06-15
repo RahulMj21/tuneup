@@ -48,7 +48,7 @@ jobs:
                   apiToken: ${{ secrets.CF_API_TOKEN }}
                   accountId: ${{ secrets.CF_ACCOUNT_ID }}
                   projectName: ${{ secrets.CF_PROJECT_NAME }}
-                  directory: YOUR_ASSET_DIRECTORY
+                  directory: .vercel/output/static
                   branch: dev
-                  workingDirectory: .vercel/output/static
+                  # workingDirectory:
                   wranglerVersion: "3"
