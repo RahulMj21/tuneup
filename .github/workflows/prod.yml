@@ -1,4 +1,4 @@
-name: CF Preview Deployment
+name: CF Prod Deployment
 on:
     pull_request:
         types: [closed]
