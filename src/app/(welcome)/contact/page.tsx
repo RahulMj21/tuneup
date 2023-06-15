@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 const ContactPage = () => {
     return (
         <section title="contact">
