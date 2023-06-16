@@ -60,7 +60,7 @@ const MobileNav = () => {
                         href={href}
                         key={text}
                         className={cn(
-                            "text-gray-1 py-5 link-mobile",
+                            "text-gray-1 py-5 link-mobile transition-all",
                             pathname === href && "text-light-2"
                         )}
                     >
