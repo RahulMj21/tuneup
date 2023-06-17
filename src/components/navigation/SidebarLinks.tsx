@@ -6,17 +6,43 @@ import {
     LayoutDashboard,
     ListChecks,
     MessagesSquare,
+    Settings,
     Users,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export const SIDEBAR_LINKS = [
-    { text: "Dashboard", href: "/dashboard", icon: <LayoutDashboard /> },
-    { text: "Boards", href: "/boards", icon: <ListChecks /> },
-    { text: "Chat", href: "/chat", icon: <MessagesSquare /> },
-    { text: "Events", href: "/events", icon: <CalendarRange /> },
-    { text: "Team", href: "/team", icon: <Users /> },
+    {
+        text: "Dashboard",
+        href: "/dashboard",
+        icon: <LayoutDashboard height="1.25rem" width="1.25rem" />,
+    },
+    {
+        text: "Boards",
+        href: "/boards",
+        icon: <ListChecks height="1.25rem" width="1.25rem" />,
+    },
+    {
+        text: "Chat",
+        href: "/chat",
+        icon: <MessagesSquare height="1.25rem" width="1.25rem" />,
+    },
+    {
+        text: "Events",
+        href: "/events",
+        icon: <CalendarRange height="1.25rem" width="1.25rem" />,
+    },
+    {
+        text: "Team",
+        href: "/team",
+        icon: <Users height="1.25rem" width="1.25rem" />,
+    },
+    {
+        text: "Settings",
+        href: "/settings",
+        icon: <Settings height="1.25rem" width="1.25rem" />,
+    },
 ];
 
 const SidebarLinks = () => {
@@ -30,7 +56,7 @@ const SidebarLinks = () => {
                     href={href}
                     key={href}
                     className={cn(
-                        "text-gray-1 link-mobile transition-all hover:text-light-2",
+                        "text-gray-2 link-mobile transition-all hover:text-light-2",
                         pathname === href && "text-light-2"
                     )}
                 >
