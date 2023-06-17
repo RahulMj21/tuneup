@@ -1,20 +1,20 @@
 "use client";
 
 import cn from "@/libs/cn";
-import Link from "next/link";
 import {
-    Home,
-    LayoutPanelLeft,
     Banknote,
-    HeartHandshake,
     Contact2,
+    HeartHandshake,
+    Home,
+    LayoutDashboard,
 } from "lucide-react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 
 export const LINKS = [
     { text: "Home", href: "/", icon: <Home /> },
-    { text: "Dashboard", href: "/dashboard", icon: <LayoutPanelLeft /> },
+    { text: "Dashboard", href: "/dashboard", icon: <LayoutDashboard /> },
     { text: "Pricing", href: "/pricing", icon: <Banknote /> },
     { text: "Support", href: "/support", icon: <HeartHandshake /> },
     { text: "Contact", href: "/contact", icon: <Contact2 /> },
