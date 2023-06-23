@@ -17,8 +17,10 @@ module.exports = {
             colors: {
                 "dark-1": "var(--color-dark-1)",
                 "dark-2": "var(--color-dark-2)",
+                "dark-3": "var(--color-dark-3)",
                 "light-1": "var(--color-light-1)",
                 "light-2": "var(--color-light-2)",
+                "light-3": "var(--color-light-3)",
                 "gray-1": "var(--color-gray-1)",
                 "gray-2": "var(--color-gray-2)",
                 "gray-3": "var(--color-gray-3)",
@@ -30,6 +32,8 @@ module.exports = {
                 "green-1": "var(--color-green-1)",
                 "green-2": "var(--color-green-2)",
                 "green-3": "var(--color-green-3)",
+                "focus-1": "var(--color-focus-1)",
+                "focus-2": "var(--color-focus-2)",
             },
             fontWeight: {
                 light: "var(--light)",
@@ -44,6 +48,20 @@ module.exports = {
             },
             gridTemplateColumns: {
                 plan: "repeat(auto-fit, minmax(20rem, 1fr))",
+            },
+            keyframes: {
+                "accordion-down": {
+                    from: { height: 0 },
+                    to: { height: "var(--radix-accordion-content-height)" },
+                },
+                "accordion-up": {
+                    from: { height: "var(--radix-accordion-content-height)" },
+                    to: { height: 0 },
+                },
+            },
+            animation: {
+                "accordion-down": "accordion-down 0.2s ease-out",
+                "accordion-up": "accordion-up 0.2s ease-out",
             },
         },
     },

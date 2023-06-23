@@ -7,8 +7,10 @@
         /* colors */
         --color-dark-1: #000000;
         --color-dark-2: #1d1f20;
+        --color-dark-3: #101111;
         --color-light-1: #fefefe;
         --color-light-2: #eceef0;
+        --color-light-3: #aeaeae;
         --color-gray-1: #6f747b;
         --color-gray-2: #53575d;
         --color-gray-3: #373a3d;
@@ -20,6 +22,8 @@
         --color-green-1: #1d7d5d;
         --color-green-2: #2d8a7f;
         --color-green-3: #20a161;
+        --color-focus-1: #d21ea2;
+        --color-focus-2: #bc2293;
 
         /* font-weight */
         --light: 300;
@@ -67,6 +71,12 @@
     }
     ::-webkit-scrollbar-thumb {
         @apply bg-gray-2;
+    }
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    a:focus-visible {
+        @apply outline-none ring-2 ring-focus-1;
     }
 }
 
