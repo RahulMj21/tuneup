@@ -2,7 +2,8 @@
 
 import cn from "@/libs/cn";
 import {
-    CalendarRange,
+    CalendarCheck,
+    Hourglass,
     LayoutDashboard,
     ListChecks,
     MessagesSquare,
@@ -31,7 +32,12 @@ export const SIDEBAR_LINKS = [
     {
         text: "Events",
         href: "/events",
-        icon: <CalendarRange height="1.25rem" width="1.25rem" />,
+        icon: <CalendarCheck height="1.25rem" width="1.25rem" />,
+    },
+    {
+        text: "Hours",
+        href: "/hours",
+        icon: <Hourglass height="1.25rem" width="1.25rem" />,
     },
     {
         text: "Team",
@@ -57,7 +63,7 @@ const SidebarLinks = () => {
                     key={href}
                     className={cn(
                         "text-gray-2 link-mobile transition-all hover:text-light-2",
-                        pathname === href && "text-light-2"
+                        pathname.includes(href) && "text-light-2"
                     )}
                 >
                     {icon}

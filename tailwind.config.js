@@ -20,6 +20,7 @@ module.exports = {
                 "dark-3": "var(--color-dark-3)",
                 "light-1": "var(--color-light-1)",
                 "light-2": "var(--color-light-2)",
+                "light-3": "var(--color-light-3)",
                 "gray-1": "var(--color-gray-1)",
                 "gray-2": "var(--color-gray-2)",
                 "gray-3": "var(--color-gray-3)",
