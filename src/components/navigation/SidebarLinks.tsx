@@ -5,7 +5,7 @@ import {
     CalendarCheck,
     Hourglass,
     LayoutDashboard,
-    ListChecks,
+    LayoutList,
     MessagesSquare,
     Settings,
     Users,
@@ -22,7 +22,7 @@ export const SIDEBAR_LINKS = [
     {
         text: "Boards",
         href: "/boards",
-        icon: <ListChecks height="1.25rem" width="1.25rem" />,
+        icon: <LayoutList height="1.25rem" width="1.25rem" />,
     },
     {
         text: "Chat",
