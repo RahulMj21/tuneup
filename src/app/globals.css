@@ -81,9 +81,6 @@
 }
 
 @layer components {
-    .focus-style {
-        @apply outline-none ring-4 ring-pink-500 ring-opacity-50;
-    }
     .ufo-path {
         clip-path: polygon(15% 0%, 85% 0%, 110% 100%, -10% 100%);
     }

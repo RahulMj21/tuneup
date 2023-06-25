@@ -43,7 +43,7 @@ const BoardItemGroupAccordion = ({ title }: Props) => {
                                 "text-gray-1 py-[0.35rem] pl-2 tracking-wide rounded-full",
                                 id &&
                                     id === item.id &&
-                                    "text-light-2 bg-gradient-to-r from-dark-3 to-dark-3"
+                                    "text-light-2 bg-gradient-to-r from-dark-2 to-dark-3"
                             )}
                         >
                             {item.title}

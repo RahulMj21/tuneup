@@ -7,7 +7,7 @@ interface Props {
 
 const BoardsLayout = ({ children }: Props) => {
     return (
-        <div className="flex h-[100vh]">
+        <div className="flex h-[100vh] w-full">
             <BoardsList />
             {children}
         </div>
