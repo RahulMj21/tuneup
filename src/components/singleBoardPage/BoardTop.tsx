@@ -9,7 +9,7 @@ import { MoreVertical, SlidersHorizontal, Star } from "lucide-react";
 
 const BoardTop = () => {
     return (
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-10">
             <div className="flex items-start justify-between">
                 <h2>🏷️ Amazing Board</h2>
                 <div className="flex items-center gap-2">
