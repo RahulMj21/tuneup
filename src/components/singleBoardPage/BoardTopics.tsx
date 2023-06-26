@@ -18,12 +18,18 @@ const BoardTopics = () => {
     const router = useRouter();
 
     return (
-        <div className="flex items-center pb-2">
+        <div className="flex items-center">
             {BOARD_TOPICS.map(({ text, topic }) => (
                 <Button
                     key={text}
                     variant="text"
-                    onClick={() => router.push(`${pathname}?topic=${topic}`)}
+                    onClick={() =>
+                        router.push(
+                            `${pathname}?topic=${topic}&view=${
+                                searchParams.get("view") || ""
+                            }`
+                        )
+                    }
                     className={cn(
                         "relative px-3 tracking-wide text-gray-1 hover:text-light-1 before:absolute before:w-4/5 before:-bottom-[0.625rem] before:h-[2.3px] before:rounded-full before:hidden before:bg-light-2 before:-translate-x-1/2 before:left-1/2 before:pointer-events-none transition-all",
                         searchParams.get("topic") === topic &&
