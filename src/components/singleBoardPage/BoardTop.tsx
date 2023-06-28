@@ -1,11 +1,13 @@
 import ProfileDropdown from "@/components/dropdown/ProfileDropdown";
 import CustomSearchInput from "@/components/formControls/CustomSearchInput";
+import AddToFavouriteDialog from "@/components/modal/AddToFavouriteDialog";
+import BoardMembers from "@/components/singleBoardPage/BoardMembers";
 import BoardTopics from "@/components/singleBoardPage/BoardTopics";
 import BoardViews from "@/components/singleBoardPage/BoardViews";
 import { Button } from "@/components/ui/Button";
 import { IconButton } from "@/components/ui/IconButton";
 import cn from "@/libs/cn";
-import { MoreVertical, SlidersHorizontal, Star } from "lucide-react";
+import { MoreVertical, SlidersHorizontal } from "lucide-react";
 
 const BoardTop = () => {
     return (
@@ -17,9 +19,7 @@ const BoardTop = () => {
                         placeholder="Search..."
                         className="w-52"
                     />
-                    <IconButton>
-                        <Star className="h-5 w-5" />
-                    </IconButton>
+                    <AddToFavouriteDialog />
                     <IconButton>
                         <MoreVertical className="h-5 w-5" />
                     </IconButton>
@@ -28,7 +28,7 @@ const BoardTop = () => {
             </div>
             <div className="flex items-center justify-between border-b border-gray-4 pb-2">
                 <BoardTopics />
-                {/* USER_AVATARS WILL GO HERE */}
+                <BoardMembers />
             </div>
             <div className="flex items-center justify-between border-b border-gray-4 py-4">
                 <BoardViews />

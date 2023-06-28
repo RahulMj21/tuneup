@@ -8,6 +8,7 @@
         --color-dark-1: #000000;
         --color-dark-2: #1d1f20;
         --color-dark-3: #101111;
+        --color-dark-4: #0a0b0b;
         --color-light-1: #fefefe;
         --color-light-2: #eceef0;
         --color-light-3: #aeaeae;
@@ -125,6 +126,10 @@
     left: 50%;
     animation: animate-bg 20s linear infinite;
     z-index: -4;
+}
+
+.avatar-group:not(:first-child) {
+    transform: translateX(-50%);
 }
 
 @keyframes animate-bg {

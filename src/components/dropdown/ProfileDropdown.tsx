@@ -14,7 +14,11 @@ const ProfileDropdown = () => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger>
-                <UserAvatar src="https://github.com/shadcn.png" fallback="RM" />
+                <UserAvatar
+                    className="border-none"
+                    src="https://github.com/shadcn.png"
+                    fallback="RM"
+                />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="min-w-[12rem]">
                 <DropdownMenuLabel className="text-light-2">

@@ -1,6 +1,6 @@
 "use client";
 
-import { ListChecks, SquareKanban, Table } from "lucide-react";
+import { List, SquareKanban, Table } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import cn from "@/libs/cn";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -12,7 +12,7 @@ const VIEW_LIST = [
         icon: <SquareKanban className="h-5 w-5" />,
     },
     { text: "Table", view: "table", icon: <Table className="h-5 w-5" /> },
-    { text: "List", view: "list", icon: <ListChecks className="h-5 w-5" /> },
+    { text: "List", view: "list", icon: <List className="h-5 w-5" /> },
 ];
 
 const BoardViews = () => {
