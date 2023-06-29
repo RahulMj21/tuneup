@@ -128,10 +128,6 @@
     z-index: -4;
 }
 
-.avatar-group:not(:first-child) {
-    transform: translateX(-50%);
-}
-
 @keyframes animate-bg {
     0% {
         background-position: 0 0;
