@@ -8,7 +8,7 @@ import {
 import cn from "@/libs/cn";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 
 interface Props {
     title: string;
@@ -25,7 +25,10 @@ const DUMMY_BOARDS = [
 
 const BoardItemGroupAccordion = ({ title }: Props) => {
     const params = useParams();
+    const searchParams = useSearchParams();
     const id = params?.id;
+    const topic = searchParams.get("topic") || "tasks";
+    const view = searchParams.get("view") || "kanban";
 
     return (
         <AccordionItem key={title} value={title} data-state="open">
@@ -37,13 +40,13 @@ const BoardItemGroupAccordion = ({ title }: Props) => {
                 <div className="flex flex-col text-gray-1 gap-2">
                     {DUMMY_BOARDS.map((item) => (
                         <Link
-                            href={`/boards/${item.id}`}
+                            href={`/boards/${item.id}?topic=${topic}&view=${view}`}
                             key={item.id}
                             className={cn(
                                 "text-gray-1 py-[0.35rem] pl-2 tracking-wide rounded-full",
                                 id &&
                                     id === item.id &&
-                                    "text-light-2 bg-gradient-to-r from-dark-3 to-dark-3"
+                                    "text-light-2 bg-gradient-to-r from-dark-2 to-dark-3"
                             )}
                         >
                             {item.title}

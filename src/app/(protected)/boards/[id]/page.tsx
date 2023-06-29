@@ -1,9 +1,16 @@
+import BoardBottom from "@/components/singleBoardPage/BoardBottom";
+import BoardTop from "@/components/singleBoardPage/BoardTop";
+
 export const runtime = "edge";
 
-const SingleBoardPage = () => {
+const SingleBoardPage = async () => {
     return (
-        <section title="single Board" className="px-4 py-6">
-            <h1>Single Board</h1>
+        <section
+            title="single Board"
+            className="px-4 pt-6 flex-1 flex flex-col gap-5"
+        >
+            <BoardTop />
+            <BoardBottom />
         </section>
     );
 };
