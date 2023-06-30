@@ -17,21 +17,25 @@ const BoardMembers = () => {
         <div className="flex items-center gap-3">
             <div className="relative flex items-center h-12">
                 {USERS.map((user, idx) => (
-                    <Avatar
+                    <div
                         key={user.id}
-                        title={String(user.id)}
                         className={cn(
-                            `absolute right-0 cursor-pointer inline-block hover:z-[999] transition-all hover:mb-1`
+                            `absolute right-0 cursor-pointer inline-block hover:z-[999] group`
                         )}
                         style={{
                             transform: `translateX(-${65 * idx}%)`,
                         }}
                     >
-                        <AvatarImage src={idx === 0 ? "" : user.src} />
-                        <AvatarFallback>
-                            {idx === 0 ? "10+" : "RM"}
-                        </AvatarFallback>
-                    </Avatar>
+                        <Avatar
+                            className="group-hover:mb-2 transition-all"
+                            title={String(user.id)}
+                        >
+                            <AvatarImage src={idx === 0 ? "" : user.src} />
+                            <AvatarFallback>
+                                {idx === 0 ? "10+" : "RM"}
+                            </AvatarFallback>
+                        </Avatar>
+                    </div>
                 ))}
             </div>
             <Separator className="h-8" />
