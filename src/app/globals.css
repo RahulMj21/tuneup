@@ -12,6 +12,7 @@
         --color-light-1: #fefefe;
         --color-light-2: #eceef0;
         --color-light-3: #aeaeae;
+        --color-light-4: #939393;
         --color-gray-1: #6f747b;
         --color-gray-2: #53575d;
         --color-gray-3: #373a3d;
@@ -65,13 +66,13 @@
         @apply text-gray-1 tracking-[0.4px];
     }
     ::-webkit-scrollbar {
-        @apply w-[0.625rem];
+        @apply w-1 h-1;
     }
     ::-webkit-scrollbar-track {
-        @apply bg-dark-2;
+        @apply bg-transparent;
     }
     ::-webkit-scrollbar-thumb {
-        @apply bg-gray-2;
+        @apply bg-gray-2 rounded-md;
     }
     button:focus-visible,
     input:focus-visible,

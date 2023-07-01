@@ -1,9 +1,9 @@
+import CustomTooltip from "@/components/common/CustomTooltip";
 import { Button } from "@/components/ui/Button";
 import cn from "@/libs/cn";
 import { IPlan } from "@/types";
-import { HTMLAttributes, forwardRef } from "react";
 import { CheckCircle, HelpCircle, XCircle } from "lucide-react";
-import CustomTooltip from "@/components/common/CustomTooltip";
+import { HTMLAttributes, forwardRef } from "react";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
     isAnnual: boolean;

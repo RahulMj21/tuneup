@@ -10,9 +10,6 @@ const BoardBottom = () => {
                     <TaskColumn />
                     <TaskColumn />
                     <TaskColumn />
-                    <TaskColumn />
-                    <TaskColumn />
-                    <TaskColumn />
                 </div>
             </div>
         </div>

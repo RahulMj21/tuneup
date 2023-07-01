@@ -7,11 +7,20 @@ import BoardViews from "@/components/singleBoardPage/BoardViews";
 import { Button } from "@/components/ui/Button";
 import { IconButton } from "@/components/ui/IconButton";
 import cn from "@/libs/cn";
+import { IUser } from "@/types";
 import { MoreVertical, SlidersHorizontal } from "lucide-react";
+
+const USERS: IUser[] = [
+    { id: "1", avatarUrl: "https://github.com/shadcn.png" },
+    { id: "2", avatarUrl: "https://github.com/shadcn.png" },
+    { id: "3", avatarUrl: "https://github.com/shadcn.png" },
+    { id: "4", avatarUrl: "https://github.com/shadcn.png" },
+    { id: "5", avatarUrl: "https://github.com/shadcn.png" },
+];
 
 const BoardTop = () => {
     return (
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-8">
             <div className="flex items-start justify-between">
                 <h2>🏷️ Amazing Board</h2>
                 <div className="flex items-center gap-2">
@@ -26,9 +35,9 @@ const BoardTop = () => {
                     <ProfileDropdown />
                 </div>
             </div>
-            <div className="flex items-center justify-between border-b border-gray-4 pb-2">
+            <div className="flex items-center justify-between border-b border-gray-4 pb-2 mt-1">
                 <BoardTopics />
-                <BoardMembers />
+                <BoardMembers users={USERS} />
             </div>
             <div className="flex items-center justify-between border-b border-gray-4 py-4">
                 <BoardViews />
