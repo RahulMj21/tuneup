@@ -3,5 +3,12 @@ import { NextResponse } from "next/server";
 export const runtime = "edge";
 
 export async function GET() {
-    return NextResponse.json({ status: "OK", message: "RADHE ❣️ SHYAM" });
+    try {
+        return NextResponse.json({ status: "OK", message: "RADHE ❣️ SHYAM" });
+    } catch (error) {
+        return NextResponse.json(
+            { status: "Failed", message: "Something Went Wrong" },
+            { status: 500 }
+        );
+    }
 }
