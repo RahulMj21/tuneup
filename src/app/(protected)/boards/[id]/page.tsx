@@ -7,7 +7,7 @@ const SingleBoardPage = async () => {
     return (
         <section
             title="single Board"
-            className="px-4 pt-6 flex-1 flex flex-col gap-5"
+            className="px-4 pt-6 flex-1 flex flex-col gap-5 overflow-x-hidden"
         >
             <BoardTop />
             <BoardBottom />

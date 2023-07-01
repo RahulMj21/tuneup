@@ -11,3 +11,8 @@ export interface IPlan {
     features: IPlanFeature[];
     cta: string;
 }
+
+export interface IUser {
+    id: string;
+    avatarUrl: string;
+}
