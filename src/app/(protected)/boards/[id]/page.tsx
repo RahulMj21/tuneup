@@ -3,7 +3,7 @@ import BoardTop from "@/components/singleBoardPage/BoardTop";
 
 export const runtime = "edge";
 
-const SingleBoardPage = async () => {
+const SingleBoardPage = () => {
     return (
         <section
             title="single Board"
