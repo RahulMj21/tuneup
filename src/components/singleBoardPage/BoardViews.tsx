@@ -39,7 +39,7 @@ const BoardViews = () => {
                     className={cn(
                         "px-2 py-1 rounded-md text-[0.875rem] text-gray-1 bg-transparent",
                         searchParams.get("view") === view &&
-                            "bg-dark-3 text-light-2"
+                            "bg-dark-2 text-light-1"
                     )}
                 >
                     {icon}

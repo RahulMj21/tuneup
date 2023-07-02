@@ -1,6 +1,6 @@
 import ProfileDropdown from "@/components/dropdown/ProfileDropdown";
 import CustomSearchInput from "@/components/formControls/CustomSearchInput";
-import AddToFavouriteDialog from "@/components/modal/AddToFavouriteDialog";
+import AddToFavouriteDialog from "@/components/dialog/AddToFavouriteDialog";
 import BoardMembers from "@/components/singleBoardPage/BoardMembers";
 import BoardTopics from "@/components/singleBoardPage/BoardTopics";
 import BoardViews from "@/components/singleBoardPage/BoardViews";
@@ -35,13 +35,16 @@ const BoardTop = () => {
                     <ProfileDropdown />
                 </div>
             </div>
-            <div className="flex items-center justify-between border-b border-gray-4 pb-2 mt-1">
+            <div className="flex items-center justify-between border-b border-gray-3 pb-2 mt-1">
                 <BoardTopics />
                 <BoardMembers users={USERS} />
             </div>
-            <div className="flex items-center justify-between border-b border-gray-4 py-4">
+            <div className="flex items-center justify-between border-b border-gray-3 py-4">
                 <BoardViews />
-                <Button variant="text" className={cn("text-gray-1 px-2 py-1")}>
+                <Button
+                    variant="text"
+                    className={cn("text-light-3 hover:text-light-1 px-2 py-1")}
+                >
                     <SlidersHorizontal className="h-4 w-4" /> Filter
                 </Button>
             </div>

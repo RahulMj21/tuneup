@@ -5,12 +5,11 @@
 @layer base {
     :root {
         /* colors */
-        --color-dark-1: #000000;
-        --color-dark-2: #1d1f20;
-        --color-dark-3: #101111;
-        --color-dark-4: #0a0b0b;
+        --color-dark-1: #111111;
+        --color-dark-2: #2a2a2b;
+        --color-dark-3: #1d1d1d;
         --color-light-1: #fefefe;
-        --color-light-2: #eceef0;
+        --color-light-2: #e0e0e0;
         --color-light-3: #aeaeae;
         --color-light-4: #939393;
         --color-gray-1: #6f747b;

@@ -40,7 +40,7 @@ const BoardTopics = () => {
         >
             <div
                 ref={barRef}
-                className="absolute bg-dark-3 w-0 h-9 rounded-md transition-all pointer-events-none"
+                className="absolute bg-dark-2 w-0 h-9 rounded-md transition-all pointer-events-none"
             />
             {BOARD_TOPICS.map(({ text, topic }) => (
                 <Button
@@ -55,7 +55,7 @@ const BoardTopics = () => {
                         )
                     }
                     className={cn(
-                        "relative px-3 tracking-wide text-gray-1 hover:text-light-1 before:absolute before:w-4/5 before:-bottom-[0.625rem] before:h-[2.3px] before:rounded-full before:hidden before:bg-light-2 before:-translate-x-1/2 before:left-1/2 before:pointer-events-none transition-all",
+                        "relative px-3 tracking-wide text-gray-1 hover:text-light-2 before:absolute before:w-4/5 before:-bottom-[0.625rem] before:h-[2.3px] before:rounded-full before:hidden before:bg-light-2 before:-translate-x-1/2 before:left-1/2 before:pointer-events-none transition-all",
                         searchParams.get("topic") === topic &&
                             "text-light-2 before:inline-block"
                     )}
