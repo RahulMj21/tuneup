@@ -9,12 +9,12 @@ interface Props {
 
 const WelcomeLayout = ({ children }: Props) => {
     return (
-        <>
+        <div>
             <Header />
             <main className="min-h-[calc(100vh-6rem)]">{children}</main>
             <Footer />
             <MobileNav />
-        </>
+        </div>
     );
 };
 

@@ -8,7 +8,7 @@ const HomePage = () => {
     return (
         <>
             <Blob />
-            <section title="Home" className="relative w-full pt-16 ">
+            <section title="Home" className="relative w-full pt-16 pb-8">
                 <div className="w-full custom-container gap-8 flex flex-col items-center">
                     <div>
                         <h1 className="hero-heading text-center lg:text-left">

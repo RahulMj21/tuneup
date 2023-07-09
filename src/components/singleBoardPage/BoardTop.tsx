@@ -35,11 +35,11 @@ const BoardTop = () => {
                     <ProfileDropdown />
                 </div>
             </div>
-            <div className="flex items-center justify-between border-b border-gray-3 pb-2 mt-1">
+            <div className="flex items-center justify-between border-b border-gray-5 pb-2 mt-1">
                 <BoardTopics />
                 <BoardMembers users={USERS} />
             </div>
-            <div className="flex items-center justify-between border-b border-gray-3 py-4">
+            <div className="flex items-center justify-between border-b border-gray-5 py-4">
                 <BoardViews />
                 <Button
                     variant="text"

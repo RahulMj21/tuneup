@@ -21,9 +21,9 @@ const TaskCard = () => {
             <TaskDetailsDialog {...{ open, setOpen }} />
             <div
                 onClick={() => setOpen(true)}
-                className="bg-gray-4 py-3 rounded-lg flex flex-col border border-gray-3 group/card cursor-pointer"
+                className="bg-gray-4 py-3 rounded-lg flex flex-col border border-gray-5 group/card cursor-pointer"
             >
-                <div className="px-2 flex flex-col gap-1 border-b border-gray-3 pb-3">
+                <div className="px-2 flex flex-col gap-1 border-b border-gray-5 pb-3">
                     <div className="flex items-center justify-between">
                         <h5 className="text-light-2 tracking-wide">
                             Task Title
