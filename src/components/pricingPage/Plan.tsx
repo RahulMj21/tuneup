@@ -18,7 +18,7 @@ const Plan = forwardRef<HTMLDivElement, Props>(
             <div
                 ref={ref}
                 className={cn(
-                    "relative flex flex-col gap-5 w-full pb-2 pt-6 rounded-2xl border-[1px] border-gray-3",
+                    "relative flex flex-col gap-5 w-full pb-2 pt-6 rounded-2xl border-[1px] border-gray-5",
                     isPopular &&
                         "border-blue-2 shadow-[0_1px_33px_-15px_#3b9ff6]",
                     className
@@ -69,7 +69,7 @@ const Plan = forwardRef<HTMLDivElement, Props>(
                         </p>
                     ))}
                 </div>
-                <div className="w-full py-8 px-5 border-t border-gray-3">
+                <div className="w-full py-8 px-5 border-t border-gray-5">
                     <Button
                         className={cn(
                             "w-full justify-center text-[1.125rem] font-semibold",

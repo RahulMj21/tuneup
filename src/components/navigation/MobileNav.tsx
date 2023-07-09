@@ -43,7 +43,7 @@ const MobileNav = () => {
     return (
         <nav
             className={cn(
-                "block sm:hidden fixed w-full bottom-0 left-0 border-t border-gray-3 backdrop-blur-[20rem]",
+                "block sm:hidden fixed w-full bottom-0 left-0 border-t border-gray-5 backdrop-blur-[20rem]",
                 !isHomePage && "bg-dark-1"
             )}
         >
