@@ -4,7 +4,7 @@ import { Accordion } from "@/components/ui/Accordion";
 
 const BoardsList = () => {
     return (
-        <div className="w-52 border-r border-gray-4 px-2 py-6 flex flex-col gap-8">
+        <div className="w-52 border-r border-gray-3 px-2 py-6 flex flex-col gap-8">
             <CustomSearchInput type="text" placeholder="Search..." />
             <Accordion
                 type="multiple"

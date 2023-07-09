@@ -1,6 +1,6 @@
+import TaskCard from "@/components/singleBoardPage/TaskCard";
 import { IconButton } from "@/components/ui/IconButton";
 import { Circle, MoreVertical } from "lucide-react";
-import Task from "@/components/singleBoardPage/Task";
 
 const TaskColumn = () => {
     return (
@@ -17,16 +17,16 @@ const TaskColumn = () => {
             </div>
             {/* Column Tasks */}
             <div className="flex-1 bg-gradient-to-b from-dark-3 to-dark-1 rounded-lg overflow-y-auto pb-4 flex flex-col gap-3">
-                <Task />
-                <Task />
-                <Task />
-                <Task />
-                <Task />
-                <Task />
-                <Task />
-                <Task />
-                <Task />
-                <Task />
+                <TaskCard />
+                <TaskCard />
+                <TaskCard />
+                <TaskCard />
+                <TaskCard />
+                <TaskCard />
+                <TaskCard />
+                <TaskCard />
+                <TaskCard />
+                <TaskCard />
             </div>
         </div>
     );
