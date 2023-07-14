@@ -5,9 +5,10 @@
 @layer base {
     :root {
         /* colors */
-        --color-dark-1: #111;
+        --color-dark-1: #0c0c0c;
         --color-dark-2: #2a2a2b;
         --color-dark-3: #1d1d1d;
+        --color-dark-4: #111;
         --color-light-1: #fefefe;
         --color-light-2: #e0e0e0;
         --color-light-3: #aeaeae;

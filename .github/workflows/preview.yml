@@ -1,29 +1,31 @@
-name: CF Preview Deployment
+name: Vercel Preview Deployment
 on:
     pull_request:
         types: [closed]
         branches:
             - dev
 jobs:
-    publish:
+    deploy:
+        if: github.event.pull_request.merged == true
+        name: Vercel Deploy Pipeline
         runs-on: ubuntu-latest
-        permissions:
-            contents: read
-            deployments: write
-        name: Publish to Cloudflare Pages
+        defaults:
+            run:
+                shell: bash
+        strategy:
+            matrix:
+                node-version: ["18.x"]
         steps:
-            - name: Checkout
-              uses: actions/checkout@v3
+            - uses: actions/checkout@v3
 
-            - name: Build
-              run: npx @cloudflare/next-on-pages@1
-
-            - name: Publish to Cloudflare Pages
-              uses: cloudflare/pages-action@v1
+            - name: Install Nodejs ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
               with:
-                  apiToken: ${{ secrets.CF_API_TOKEN }}
-                  accountId: ${{ secrets.CF_ACCOUNT_ID }}
-                  projectName: ${{ secrets.CF_PROJECT_NAME }}
-                  directory: .vercel/output/static
-                  branch: dev
-                  wranglerVersion: "3"
+                  node-version: ${{ matrix.node-version }}
+
+            - name: Deploy to Vercel
+              run: npx vercel --token ${VERCEL_TOKEN} --preview
+              env:
+                  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+                  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+                  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID}}

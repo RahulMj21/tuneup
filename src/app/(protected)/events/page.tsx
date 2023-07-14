@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 const EventsPage = () => {
     return (
         <section title="events">
