@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 const ChatPage = () => {
     return (
         <section title="chat">

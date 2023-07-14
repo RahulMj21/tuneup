@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 const TeamPage = () => {
     return (
         <section title="team">

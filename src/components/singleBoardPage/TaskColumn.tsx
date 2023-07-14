@@ -16,13 +16,7 @@ const TaskColumn = () => {
                 </IconButton>
             </div>
             {/* Column Tasks */}
-            <div className="flex-1 bg-gradient-to-b from-dark-3 to-dark-1 rounded-lg overflow-y-auto pb-4 flex flex-col gap-3">
-                <TaskCard />
-                <TaskCard />
-                <TaskCard />
-                <TaskCard />
-                <TaskCard />
-                <TaskCard />
+            <div className="flex-1 bg-gradient-to-b from-dark-4 to-dark-1 rounded-lg overflow-y-auto pb-4 flex flex-col gap-3">
                 <TaskCard />
                 <TaskCard />
                 <TaskCard />
