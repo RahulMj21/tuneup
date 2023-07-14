@@ -1,6 +1,8 @@
 import BoardBottom from "@/components/singleBoardPage/BoardBottom";
 import BoardTop from "@/components/singleBoardPage/BoardTop";
 
+export const runtime = "edge";
+
 const SingleBoardPage = () => {
     return (
         <section
