@@ -2,6 +2,8 @@ import Blob from "@/components/common/Blob";
 import LinkButton from "@/components/ui/LinkButton";
 import { ArrowRight } from "lucide-react";
 
+export const runtime = "edge";
+
 const HomePage = () => {
     return (
         <>

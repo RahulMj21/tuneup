@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 const SettingsPage = () => {
     return (
         <section title="settings">
