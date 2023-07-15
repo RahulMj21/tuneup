@@ -32,7 +32,7 @@ const BoardItemGroupAccordion = ({ title }: Props) => {
 
     return (
         <AccordionItem key={title} value={title} data-state="open">
-            <AccordionTrigger className="text-[1rem] text-light-3 py-2 gap-2 justify-start tracking-wide">
+            <AccordionTrigger className="text-[1rem] text-light-2 py-2 gap-2 justify-start tracking-wide">
                 <ChevronRight className="h-[1.12rem] w-[1.12rem] transition-all" />
                 {title}
             </AccordionTrigger>
@@ -43,7 +43,7 @@ const BoardItemGroupAccordion = ({ title }: Props) => {
                             href={`/boards/${item.id}?topic=${topic}&view=${view}`}
                             key={item.id}
                             className={cn(
-                                "text-gray-1 py-[0.35rem] pl-2 tracking-wide rounded-full",
+                                "text-light-3 py-[0.35rem] pl-2 tracking-wide rounded-full",
                                 id &&
                                     id === item.id &&
                                     "text-light-2 bg-gradient-to-r from-dark-2 to-dark-3"

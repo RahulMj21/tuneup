@@ -13,7 +13,9 @@ const ChatPage = () => {
                 src={Robot.src}
                 height={300}
                 width={300}
-                alt="AI Robot Welcomes User"
+                alt="AI Robot Saying Hello"
+                priority={true}
+                className="pointer-events-none"
             />
         </section>
     );
