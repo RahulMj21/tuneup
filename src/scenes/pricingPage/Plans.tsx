@@ -1,6 +1,6 @@
 "use client";
 
-import Plan from "@/components/pricingPage/Plan";
+import Plan from "@/scenes/pricingPage/Plan";
 import Switch from "@/components/ui/Switch";
 import { PLAN_ITEMS } from "@/utils/constants";
 import { useState } from "react";

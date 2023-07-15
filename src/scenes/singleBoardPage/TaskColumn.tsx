@@ -1,4 +1,4 @@
-import TaskCard from "@/components/singleBoardPage/TaskCard";
+import TaskCard from "@/scenes/singleBoardPage/TaskCard";
 import { IconButton } from "@/components/ui/IconButton";
 import { Circle, MoreVertical } from "lucide-react";
 

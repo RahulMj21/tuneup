@@ -11,7 +11,6 @@
         "validate": "npx tsc --noEmit &&  npx eslint . && npx prettier --write ."
     },
     "dependencies": {
-        "@planetscale/database": "^1.7.0",
         "@radix-ui/react-accordion": "^1.1.2",
         "@radix-ui/react-avatar": "^1.0.3",
         "@radix-ui/react-dialog": "^1.0.4",
@@ -25,7 +24,6 @@
         "@types/react-dom": "18.0.11",
         "class-variance-authority": "^0.6.0",
         "clsx": "^1.2.1",
-        "drizzle-orm": "^0.26.1",
         "eslint": "8.36.0",
         "eslint-config-next": "13.2.4",
         "lucide-react": "^0.257.0",
@@ -41,7 +39,6 @@
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.55.0",
         "autoprefixer": "^10.4.14",
-        "drizzle-kit": "^0.18.1",
         "eslint-config-prettier": "^8.7.0",
         "husky": "^8.0.0",
         "lint-staged": "^13.2.0",

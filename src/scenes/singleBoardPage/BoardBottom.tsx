@@ -1,4 +1,4 @@
-import TaskColumn from "@/components/singleBoardPage/TaskColumn";
+import TaskColumn from "@/scenes/singleBoardPage/TaskColumn";
 
 const BoardBottom = () => {
     return (

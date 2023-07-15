@@ -1,10 +1,10 @@
 "use client";
 
-import TaskAssignees from "@/components/singleBoardPage/TaskAssignees";
+import TaskAssignees from "@/scenes/singleBoardPage/TaskAssignees";
 import { IconButton } from "@/components/ui/IconButton";
 import { IUser } from "@/types";
 import { MessageCircle, MoreVertical, Paperclip } from "lucide-react";
-import TaskDetailsDialog from "../dialog/TaskDetailsDialog";
+import TaskDetailsDialog from "@/components/dialog/TaskDetailsDialog";
 import { useState } from "react";
 
 const USERS: IUser[] = [
