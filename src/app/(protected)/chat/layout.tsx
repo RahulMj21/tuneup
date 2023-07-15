@@ -1,5 +1,5 @@
+import ChatBar from "@/scenes/chatPage/ChatBar";
 import { ReactNode } from "react";
-import BoardsList from "@/scenes/boardsPage/BoardsList";
 
 interface Props {
     children: ReactNode;
@@ -8,7 +8,7 @@ interface Props {
 const BoardsLayout = ({ children }: Props) => {
     return (
         <div className="flex h-[100vh] w-full">
-            <BoardsList />
+            <ChatBar />
             {children}
         </div>
     );

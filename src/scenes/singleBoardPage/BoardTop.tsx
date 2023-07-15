@@ -1,9 +1,9 @@
 import ProfileDropdown from "@/components/dropdown/ProfileDropdown";
 import CustomSearchInput from "@/components/formControls/CustomSearchInput";
 import AddToFavouriteDialog from "@/components/dialog/AddToFavouriteDialog";
-import BoardMembers from "@/components/singleBoardPage/BoardMembers";
-import BoardTopics from "@/components/singleBoardPage/BoardTopics";
-import BoardViews from "@/components/singleBoardPage/BoardViews";
+import BoardMembers from "@/scenes/singleBoardPage/BoardMembers";
+import BoardTopics from "@/scenes/singleBoardPage/BoardTopics";
+import BoardViews from "@/scenes/singleBoardPage/BoardViews";
 import { Button } from "@/components/ui/Button";
 import { IconButton } from "@/components/ui/IconButton";
 import cn from "@/libs/cn";

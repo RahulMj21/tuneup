@@ -67,7 +67,7 @@
         @apply text-gray-1 tracking-[0.4px];
     }
     ::-webkit-scrollbar {
-        @apply w-1 h-1;
+        @apply w-1 h-2;
     }
     ::-webkit-scrollbar-track {
         @apply bg-transparent;

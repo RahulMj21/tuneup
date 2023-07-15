@@ -1,4 +1,4 @@
-import Plans from "@/components/pricingPage/Plans";
+import Plans from "@/scenes/pricingPage/Plans";
 
 export const runtime = "edge";
 
