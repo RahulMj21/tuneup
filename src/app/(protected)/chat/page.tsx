@@ -1,4 +1,4 @@
-import Robot from "@/assets/images/robot.gif";
+import robot from "@/assets/images/robot.svg";
 import Image from "next/image";
 
 export const runtime = "edge";
@@ -10,9 +10,9 @@ const ChatPage = () => {
             className="px-4 py-6 flex-1 flex items-center justify-center"
         >
             <Image
-                src={Robot.src}
-                height={300}
-                width={300}
+                src={robot.src}
+                height={370}
+                width={370}
                 alt="AI Robot Saying Hello"
                 priority={true}
                 className="pointer-events-none"
