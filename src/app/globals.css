@@ -9,6 +9,7 @@
         --color-dark-2: #2a2a2b;
         --color-dark-3: #1d1d1d;
         --color-dark-4: #111;
+        --color-dark-5: #121212;
         --color-light-1: #fefefe;
         --color-light-2: #e0e0e0;
         --color-light-3: #aeaeae;
@@ -128,6 +129,64 @@
     left: 50%;
     animation: animate-bg 20s linear infinite;
     z-index: -4;
+}
+
+.chat-feed {
+    background: radial-gradient(
+                circle at right,
+                rgba(233, 241, 223, 0) 0.3333333333em,
+                var(--color-dark-5) 0.3333333333em,
+                var(--color-dark-5) 0.4888888889em,
+                rgba(233, 241, 223, 0) 0.4888888889em,
+                rgba(233, 241, 223, 0) 0.8222222222em,
+                var(--color-dark-5) 0.8222222222em,
+                var(--color-dark-5) 0.9777777778em,
+                rgba(233, 241, 223, 0) 0.9777777778em,
+                rgba(233, 241, 223, 0) 1.3111111111em,
+                var(--color-dark-5) 1.3111111111em,
+                var(--color-dark-5) 1.4666666667em,
+                rgba(233, 241, 223, 0) 1.4666666667em
+            )
+            0 0,
+        radial-gradient(
+                circle at left,
+                rgba(233, 241, 223, 0) 0.5777777778em,
+                var(--color-dark-5) 0.5777777778em,
+                var(--color-dark-5) 0.7333333333em,
+                rgba(233, 241, 223, 0) 0.7333333333em,
+                rgba(233, 241, 223, 0) 1.0666666667em,
+                var(--color-dark-5) 1.0666666667em,
+                var(--color-dark-5) 1.2222222222em,
+                rgba(233, 241, 223, 0) 1.2222222222em
+            )
+            0 3.0514619883em,
+        linear-gradient(
+                to right top,
+                var(--color-dark-5) 0.1555555556em,
+                rgba(233, 241, 223, 0) 0.1555555556em
+            )
+            1.2222222222em 0.1555555556em,
+        linear-gradient(
+                to left top,
+                var(--color-dark-5) 0.1555555556em,
+                rgba(233, 241, 223, 0) 0.1555555556em
+            )
+            1.2222222222em 0.1555555556em,
+        linear-gradient(
+                to right bottom,
+                var(--color-dark-5) 0.1555555556em,
+                rgba(233, 241, 223, 0) 0.1555555556em
+            )
+            1.2222222222em 0.1555555556em,
+        linear-gradient(
+                to left bottom,
+                var(--color-dark-5) 0.1555555556em,
+                rgba(233, 241, 223, 0) 0.1555555556em
+            )
+            1.2222222222em 0.1555555556em;
+
+    background-size: 2.9em 2.9em;
+    background-color: var(--color-dark-1);
 }
 
 @keyframes animate-bg {
