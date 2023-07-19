@@ -62,8 +62,10 @@ const SidebarLinks = () => {
                     href={href}
                     key={href}
                     className={cn(
-                        "text-gray-2 link-mobile transition-all hover:text-light-2",
-                        pathname.includes(href) && "text-light-1"
+                        "text-gray-2 link-mobile transition-all",
+                        pathname.includes(href)
+                            ? "text-light-1"
+                            : "hover:text-light-2"
                     )}
                 >
                     {icon}
