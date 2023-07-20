@@ -2,6 +2,8 @@ import ChatFeed from "@/scenes/singleChatPage/ChatFeed";
 import ChatHeader from "@/scenes/singleChatPage/ChatHeader";
 import ChatInput from "@/scenes/singleChatPage/ChatInput";
 
+export const runtime = "edge";
+
 const SingleChatPage = () => {
     return (
         <section
