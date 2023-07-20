@@ -7,16 +7,21 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu";
 import UserAvatar from "@/components/common/UserAvatar";
-import { Activity, User } from "lucide-react";
+import { Activity, ArrowRightLeft, User } from "lucide-react";
 import { LogOut } from "lucide-react";
+import cn from "@/libs/cn";
 
-const ProfileDropdown = () => {
+interface Props {
+    className?: string;
+}
+
+const ProfileDropdown = ({ className }: Props) => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger>
                 <UserAvatar
-                    className="border-none"
-                    src="https://github.com/shadcn.png"
+                    className={cn("border-none", className)}
+                    src=""
                     fallback="RM"
                 />
             </DropdownMenuTrigger>
@@ -32,6 +37,9 @@ const ProfileDropdown = () => {
                     </DropdownMenuItem>
                     <DropdownMenuItem>
                         <Activity className="h-5 w-5" /> Activity
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                        <ArrowRightLeft className="h-4 w-4" /> Switch Workspace
                     </DropdownMenuItem>
                 </div>
                 <DropdownMenuSeparator />
