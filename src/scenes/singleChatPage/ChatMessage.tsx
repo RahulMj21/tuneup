@@ -1,6 +1,5 @@
 import UserAvatar from "@/components/common/UserAvatar";
-import { IconButton } from "@/components/ui/IconButton";
-import cn from "@/libs/cn";
+import ChatReactions from "@/scenes/singleChatPage/ChatReactions";
 
 interface Props {
     userName: string;
@@ -24,22 +23,7 @@ const ChatMessage = ({ userName, message }: Props) => {
                 </div>
                 <div className="px-4 py-[0.625rem] bg-gray-4 rounded-lg rounded-tl-none text-light-3 relative">
                     {message}
-                    <div
-                        className={cn(
-                            "absolute flex opacity-0 pointer-events-none transition-all translate-y-2 group-hover/message:pointer-events-auto group-hover/message:translate-y-0 group-hover/message:opacity-100 -bottom-[1.6rem] right-0 bg-dark-2 px-2 py-1 items-center gap-1 rounded-lg",
-                            message.length < 15 && "-right-20"
-                        )}
-                    >
-                        <IconButton className="h-6 w-6 p-0 text-[0.75rem]">
-                            👍
-                        </IconButton>
-                        <IconButton className="h-6 w-6 p-0 text-[0.75rem]">
-                            🚀
-                        </IconButton>
-                        <IconButton className="h-6 w-6 p-0 text-[0.75rem]">
-                            🎉
-                        </IconButton>
-                    </div>
+                    <ChatReactions message={message} />
                 </div>
             </div>
         </div>

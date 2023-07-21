@@ -87,7 +87,7 @@ const DropdownMenuItem = forwardRef<
     <DropdownMenuPrimitive.Item
         ref={ref}
         className={cn(
-            "relative text-gray-1 flex select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-dark-2 cursor-pointer focus:text-light-2 data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+            "relative text-gray-1 flex select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-dark-2 cursor-pointer focus:text-light-1 data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
             inset && "pl-8",
             className
         )}

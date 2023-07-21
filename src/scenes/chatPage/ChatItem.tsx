@@ -1,3 +1,4 @@
+import NotificationNumber from "@/components/common/NotificationNumber";
 import UserAvatar from "@/components/common/UserAvatar";
 import { CheckCheck } from "lucide-react";
 import Link from "next/link";
@@ -19,9 +20,7 @@ const ChatItem = ({ hasNew }: Props) => {
                 </span>
             </div>
             {hasNew ? (
-                <span className="h-5 w-5 bg-blue-1 flex rounded-full text-[0.75rem] leading-3 items-center justify-center text-light-1 font-semibold">
-                    5
-                </span>
+                <NotificationNumber count={5} />
             ) : (
                 <CheckCheck className="h-4 w-4 text-green-1" />
             )}

@@ -17,37 +17,37 @@ export const SIDEBAR_LINKS = [
     {
         text: "Dashboard",
         href: "/dashboard",
-        icon: <LayoutDashboard height="1.25rem" width="1.25rem" />,
+        icon: <LayoutDashboard className="h-5 w-5" />,
     },
     {
         text: "Boards",
         href: "/boards",
-        icon: <ListChecks height="1.25rem" width="1.25rem" />,
+        icon: <ListChecks className="h-5 w-5" />,
     },
     {
         text: "Chat",
         href: "/chat",
-        icon: <MessagesSquare height="1.25rem" width="1.25rem" />,
+        icon: <MessagesSquare className="h-5 w-5" />,
     },
     {
         text: "Events",
         href: "/events",
-        icon: <CalendarCheck height="1.25rem" width="1.25rem" />,
+        icon: <CalendarCheck className="h-5 w-5" />,
     },
     {
         text: "Hours",
         href: "/hours",
-        icon: <Hourglass height="1.25rem" width="1.25rem" />,
+        icon: <Hourglass className="h-5 w-5" />,
     },
     {
         text: "Team",
         href: "/team",
-        icon: <Users height="1.25rem" width="1.25rem" />,
+        icon: <Users className="h-5 w-5" />,
     },
     {
         text: "Settings",
         href: "/settings",
-        icon: <Settings height="1.25rem" width="1.25rem" />,
+        icon: <Settings className="h-5 w-5" />,
     },
 ];
 
@@ -55,7 +55,7 @@ const SidebarLinks = () => {
     const pathname = usePathname();
 
     return (
-        <div className="flex flex-col items-center w-full gap-8">
+        <div className="flex flex-1 flex-col items-center w-full gap-8">
             {SIDEBAR_LINKS.map(({ text, href, icon }) => (
                 <Link
                     title={text}
