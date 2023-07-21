@@ -1,6 +1,7 @@
 import Logo from "@/components/icons/Logo";
-import Link from "next/link";
 import SidebarLinks from "@/components/navigation/SidebarLinks";
+import Link from "next/link";
+import SidebarBottom from "@/components/navigation/SidebarBottom";
 
 const Sidebar = () => {
     return (
@@ -9,6 +10,7 @@ const Sidebar = () => {
                 <Logo height={35} width={40} />
             </Link>
             <SidebarLinks />
+            <SidebarBottom />
         </div>
     );
 };
