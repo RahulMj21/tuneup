@@ -21,7 +21,7 @@ const ProfileDropdown = ({ className }: Props) => {
             <DropdownMenuTrigger>
                 <UserAvatar
                     className={cn("border-none", className)}
-                    src=""
+                    src="https://avatars.githubusercontent.com/u/77981238?s=400&u=b21bc0441702510ebe48b88bdeaaeccbfda0201e&v=4"
                     fallback="RM"
                 />
             </DropdownMenuTrigger>

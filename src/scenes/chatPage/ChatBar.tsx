@@ -12,7 +12,7 @@ const ChatBar = () => {
             <div className="px-2">
                 <CustomSearchInput type="text" placeholder="Search..." />
             </div>
-            <div className="flex flex-col gap-8 w-full px-3 pb-4 mt-4 overflow-y-auto">
+            <div className="flex flex-col gap-5 w-full px-3 pb-4 mt-4 overflow-y-auto">
                 <ChatGroup
                     title="Pin Chats"
                     startIcon={
