@@ -63,7 +63,7 @@ DropdownMenuSubContent.displayName =
 const DropdownMenuContent = forwardRef<
     ElementRef<typeof DropdownMenuPrimitive.Content>,
     ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>
->(({ className, sideOffset = 4, ...props }, ref) => (
+>(({ className, children, sideOffset = 4, ...props }, ref) => (
     <DropdownMenuPrimitive.Portal>
         <DropdownMenuPrimitive.Content
             ref={ref}
@@ -73,7 +73,10 @@ const DropdownMenuContent = forwardRef<
                 className
             )}
             {...props}
-        />
+        >
+            {children}
+            <DropdownMenuPrimitive.Arrow className="fill-dark-2" />
+        </DropdownMenuPrimitive.Content>
     </DropdownMenuPrimitive.Portal>
 ));
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
