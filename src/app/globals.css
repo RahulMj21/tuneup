@@ -77,6 +77,12 @@
     ::-webkit-scrollbar-thumb {
         @apply bg-gray-2 rounded-md;
     }
+    button,
+    input,
+    textarea,
+    a {
+        -webkit-tap-highlight-color: transparent !important;
+    }
     button:focus-visible,
     input:focus-visible,
     textarea:focus-visible,
