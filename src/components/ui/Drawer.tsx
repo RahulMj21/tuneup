@@ -61,7 +61,7 @@ export const DrawerContent = forwardRef<HTMLDivElement, DrawerContentProps>(
                 <DrawerOverlay open={open} onClick={onClose} />
                 <div
                     className={cn(
-                        "fixed right-0 top-0 bg-dark-1 transition-transform w-full md:w-[25rem] transform translate-x-full border-l border-dark-2 h-[100vh]",
+                        "fixed right-0 top-0 bg-dark-1 transition-transform w-full md:w-[27rem] transform translate-x-full border-l border-dark-2 h-[100vh]",
                         open && "translate-x-0 z-[9998]",
                         className
                     )}
