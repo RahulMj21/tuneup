@@ -14,7 +14,7 @@ const NotificationsDrawer = () => {
 
     return (
         <>
-            <DrawerTrigger asChild onClick={onOpen} className="relative">
+            <DrawerTrigger asChild onClick={onOpen}>
                 <div className="relative">
                     <IconButton
                         aria-label="Notifications"
