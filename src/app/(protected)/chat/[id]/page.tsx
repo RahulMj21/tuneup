@@ -10,8 +10,8 @@ const SingleChatPage = () => {
             title="chat"
             className="chat-feed flex-1 flex flex-col relative overflow-hidden"
         >
-            <ChatHeader />
             <ChatFeed />
+            <ChatHeader />
             {/* <ChatInput /> */}
         </section>
     );

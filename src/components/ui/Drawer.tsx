@@ -13,9 +13,7 @@ interface DrawerTriggerProps extends HTMLAttributes<HTMLButtonElement> {
 export const DrawerTrigger = forwardRef<HTMLButtonElement, DrawerTriggerProps>(
     ({ asChild, className, ...props }, ref) => {
         const Comp = asChild ? Slot : "button";
-        return (
-            <Comp tabIndex={-1} className={className} ref={ref} {...props} />
-        );
+        return <Comp className={className} ref={ref} {...props} />;
     }
 );
 
@@ -68,18 +66,22 @@ export const DrawerContent = forwardRef<HTMLDivElement, DrawerContentProps>(
                     ref={ref}
                     {...props}
                 >
-                    <div className="relative py-6 px-4 z-[9999]">
-                        <ReactFocusLock disabled={!open}>
+                    <aside
+                        title="Notifications"
+                        className="relative py-6 px-4 z-[9999]"
+                    >
+                        <ReactFocusLock disabled={!open} returnFocus>
                             <button
+                                tabIndex={open ? 0 : -1}
                                 onClick={onClose}
                                 className="p-0 bg-transparent absolute right-4 top-4 rounded-sm opacity-70  transition-opacity hover:opacity-100 focus-visible:opacity-100 cursor-pointer"
                             >
-                                <X className="h-4 w-4" />
+                                <X className="h-[1.15rem] w-[1.15rem]" />
                                 <span className="sr-only">Close</span>
                             </button>
                             {children}
                         </ReactFocusLock>
-                    </div>
+                    </aside>
                 </div>
             </div>
         );

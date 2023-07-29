@@ -14,9 +14,12 @@ const NotificationsDrawer = () => {
 
     return (
         <>
-            <DrawerTrigger asChild onClick={onOpen}>
+            <DrawerTrigger asChild onClick={onOpen} className="relative">
                 <div className="relative">
-                    <IconButton className="text-gray-2 hover:text-light-2">
+                    <IconButton
+                        aria-label="Notifications"
+                        className="text-gray-2 hover:text-light-2"
+                    >
                         <Bell className="h-5 w-5" />
                     </IconButton>
                     <NotificationNumber

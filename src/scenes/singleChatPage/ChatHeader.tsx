@@ -6,7 +6,7 @@ import { MoreVertical, Search, Video } from "lucide-react";
 
 const ChatHeader = () => {
     return (
-        <div className="absolute top-0 left-0 w-full bg-gray-900/30 backdrop-blur-[1rem] px-6 h-[5rem] flex items-center justify-between z-50">
+        <div className="absolute top-0 left-0 w-full bg-gray-900/30 backdrop-blur-[1rem] px-6 h-[5rem] flex items-center justify-between z-48">
             <div className="flex items-center gap-4">
                 <UserAvatar
                     src="https://github.com/shadcn.png"
