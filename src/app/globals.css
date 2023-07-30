@@ -27,8 +27,17 @@
         --color-green-1: #1d7d5d;
         --color-green-2: #2d8a7f;
         --color-green-3: #20a161;
+        --color-light-green-1: #69c050;
+        --color-light-green-2: #66ba4e;
+        --color-light-green-3: #65b44f;
         --color-focus-1: #d21ea2;
         --color-focus-2: #bc2293;
+        --color-red-1: #eb4643;
+        --color-red-2: #df413f;
+        --color-red-3: #d23e3b;
+        --color-yellow-1: #ebab3c;
+        --color-yellow-2: #e2a439;
+        --color-yellow-3: #d69c38;
 
         /* font-weight */
         --light: 300;
