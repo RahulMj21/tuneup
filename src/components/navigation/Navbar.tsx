@@ -13,8 +13,10 @@ const Navbar = () => {
                 <Link
                     key={text}
                     href={href}
-                    className={`relative px-4 py-1 rounded-sm hover:text-light-2 transition-all ${
-                        path === href ? "text-light-1" : "text-gray-1"
+                    className={`relative px-4 py-1 rounded-sm transition-all ${
+                        path === href
+                            ? "text-light-1"
+                            : "text-gray-1 hover:text-light-2"
                     }`}
                 >
                     {text}

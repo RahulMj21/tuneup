@@ -68,7 +68,7 @@ export const DrawerContent = forwardRef<HTMLDivElement, DrawerContentProps>(
                 >
                     <aside
                         title="Notifications"
-                        className="relative py-6 px-4 z-[9999]"
+                        className="relative py-6 z-[9999]"
                     >
                         <ReactFocusLock disabled={!open} returnFocus>
                             <button
