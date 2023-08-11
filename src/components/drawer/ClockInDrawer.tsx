@@ -4,7 +4,8 @@ import { DrawerContent, DrawerTrigger } from "@/components/ui/Drawer";
 import { IconButton } from "@/components/ui/IconButton";
 import { Play } from "lucide-react";
 import { useState } from "react";
-import UserAvatar from "../common/UserAvatar";
+import UserAvatar from "@/components/common/UserAvatar";
+import ClockInTabs from "@/components/tabs/ClockInTabs";
 
 const ClockInDrawer = () => {
     const [open, setOpen] = useState(false);
@@ -37,9 +38,12 @@ const ClockInDrawer = () => {
                         <p className="text-[0.78rem] ">
                             Clocking from GMT +5:30
                         </p>
-                        <p className="text-[0.78rem] ">Last out 11 days ago</p>
+                        <p className="text-[0.78rem] ">Last out 2 days ago</p>
                         <p className="text-[0.78rem] ">Split time 12:00 am</p>
                     </div>
+                </div>
+                <div>
+                    <ClockInTabs />
                 </div>
             </DrawerContent>
         </>

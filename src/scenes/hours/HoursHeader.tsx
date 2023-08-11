@@ -1,5 +1,5 @@
-import ClockInDrawer from "@/components/Drawer/ClockInDrawer";
-import ClockOutDrawer from "@/components/Drawer/ClockOutDrawer";
+import ClockInDrawer from "@/components/drawer/ClockInDrawer";
+import ClockOutDrawer from "@/components/drawer/ClockOutDrawer";
 import ProfileDropdown from "@/components/dropdown/ProfileDropdown";
 import { IconButton } from "@/components/ui/IconButton";
 import { Coffee, MoreVertical } from "lucide-react";
