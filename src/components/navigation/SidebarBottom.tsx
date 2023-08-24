@@ -1,4 +1,4 @@
-import NotificationsDrawer from "@/components//Drawer/NotificationsDrawer";
+import NotificationsDrawer from "@/components/drawer/NotificationsDrawer";
 import { IconButton } from "@/components/ui/IconButton";
 import { HelpCircle } from "lucide-react";
 

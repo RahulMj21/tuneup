@@ -58,9 +58,10 @@ export const DrawerContent = forwardRef<HTMLDivElement, DrawerContentProps>(
             >
                 <DrawerOverlay open={open} onClick={onClose} />
                 <div
+                    aria-hidden={open ? "true" : "false"}
                     className={cn(
-                        "fixed right-0 top-0 bg-dark-1 transition-transform w-full md:w-[27rem] transform translate-x-full border-l border-dark-2 h-[100vh]",
-                        open && "translate-x-0 z-[9998]",
+                        "fixed invisible right-0 top-0 bg-dark-4 transition-transform w-[90%] sm:w-[27rem] transform translate-x-full border-l border-dark-2 h-[100vh]",
+                        open && "translate-x-0 z-[9998] visible",
                         className
                     )}
                     ref={ref}
@@ -68,11 +69,10 @@ export const DrawerContent = forwardRef<HTMLDivElement, DrawerContentProps>(
                 >
                     <aside
                         title="Notifications"
-                        className="relative py-6 px-4 z-[9999]"
+                        className="relative py-6 z-[9999]"
                     >
                         <ReactFocusLock disabled={!open} returnFocus>
                             <button
-                                tabIndex={open ? 0 : -1}
                                 onClick={onClose}
                                 className="p-0 bg-transparent absolute right-4 top-4 rounded-sm opacity-70  transition-opacity hover:opacity-100 focus-visible:opacity-100 cursor-pointer"
                             >
