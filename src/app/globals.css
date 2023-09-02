@@ -120,6 +120,13 @@
     @apply text-[12.5vw] xl:text-[10rem] leading-[12.5vw] xl:leading-[10rem] font-normal whitespace-nowrap;
 }
 
+/* auth page */
+
+/* clerk branding */
+.cl-internal-b3fm6y {
+    display: none !important;
+}
+
 /* --------------- CUSTOM_CSS --------------------- */
 
 .blob-bg {
