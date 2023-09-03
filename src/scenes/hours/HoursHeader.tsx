@@ -20,7 +20,7 @@ const HoursHeader = () => {
                     <IconButton className="h-[2.188rem] w-[2.188rem]">
                         <MoreVertical className="h-5 w-5" />
                     </IconButton>
-                    <ProfileDropdown className="h-10 w-10" />
+                    <ProfileDropdown />
                 </div>
             </div>
         </div>

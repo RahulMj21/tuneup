@@ -21,8 +21,6 @@ const ChatInput = () => {
         ],
     };
 
-    console.log("value :", value);
-
     return (
         <div className="px-6 pb-5 pt-2">
             <ReactQuill

@@ -1,14 +1,14 @@
-import CustomSearchInput from "@/components/formControls/CustomSearchInput";
 import AddToFavouriteDialog from "@/components/dialog/AddToFavouriteDialog";
-import BoardMembers from "@/scenes/singleBoardPage/BoardMembers";
-import BoardTopics from "@/scenes/singleBoardPage/BoardTopics";
-import BoardViews from "@/scenes/singleBoardPage/BoardViews";
+import ProfileDropdown from "@/components/dropdown/ProfileDropdown";
+import CustomSearchInput from "@/components/formControls/CustomSearchInput";
 import { Button } from "@/components/ui/Button";
 import { IconButton } from "@/components/ui/IconButton";
 import cn from "@/libs/cn";
+import BoardMembers from "@/scenes/singleBoardPage/BoardMembers";
+import BoardTopics from "@/scenes/singleBoardPage/BoardTopics";
+import BoardViews from "@/scenes/singleBoardPage/BoardViews";
 import { IUser } from "@/types";
 import { MoreVertical, SlidersHorizontal } from "lucide-react";
-import { UserButton } from "@clerk/nextjs";
 
 const USERS: IUser[] = [
     { id: "1", avatarUrl: "https://github.com/shadcn.png" },
@@ -32,10 +32,7 @@ const BoardTop = () => {
                     <IconButton>
                         <MoreVertical className="h-5 w-5" />
                     </IconButton>
-                    <UserButton
-                        afterSignOutUrl="/sign-in"
-                        afterSwitchSessionUrl="/dashboard"
-                    />
+                    <ProfileDropdown />
                 </div>
             </div>
             <div className="flex items-center justify-between border-b border-gray-5 pb-2 mt-1">
