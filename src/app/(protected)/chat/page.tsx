@@ -1,8 +1,6 @@
 import robot from "@/assets/images/robot.svg";
 import Image from "next/image";
 
-export const runtime = "edge";
-
 const ChatPage = () => {
     return (
         <section
