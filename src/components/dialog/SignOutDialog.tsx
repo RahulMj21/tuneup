@@ -47,7 +47,7 @@ const SignOutDialog = ({ open, setOpen }: Props) => {
                         variant="outline2"
                         size="medium"
                         onClick={onClose}
-                        disabled={!isLoading}
+                        disabled={isLoading}
                     >
                         Cancel
                     </Button>
