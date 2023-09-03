@@ -1,7 +1,5 @@
 import ComingSoon from "@/components/common/ComingSoon";
 
-export const runtime = "edge";
-
 const SupportPage = () => {
     return (
         <section title="support">

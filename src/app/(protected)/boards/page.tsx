@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 const BoardsPage = () => {
     return (
         <section title="boards" className="px-4 py-6">
