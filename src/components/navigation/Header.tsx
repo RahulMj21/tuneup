@@ -1,10 +1,15 @@
+"use client";
 import Navbar from "@/components/navigation/Navbar";
 import LinkButton from "@/components/ui/LinkButton";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Logo from "@/components/icons/Logo";
+import { useUser } from "@clerk/nextjs";
+import ProfileDropdown from "@/components/dropdown/ProfileDropdown";
 
 const Header = () => {
+    const { isSignedIn } = useUser();
+
     return (
         <header
             title="header"
@@ -15,10 +20,14 @@ const Header = () => {
                     <Logo height={38} width={44} />
                 </Link>
                 <Navbar />
-                <LinkButton variant="outline" href="#">
-                    Get Started
-                    <ArrowRight className="button-svg h-5 w-5" />
-                </LinkButton>
+                {isSignedIn ? (
+                    <ProfileDropdown className="h-10 w-10" />
+                ) : (
+                    <LinkButton variant="outline" href="/sign-in">
+                        Get Started
+                        <ArrowRight className="button-svg h-5 w-5" />
+                    </LinkButton>
+                )}
             </div>
         </header>
     );
