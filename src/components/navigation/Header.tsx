@@ -1,11 +1,11 @@
 "use client";
+import ProfileDropdown from "@/components/dropdown/ProfileDropdown";
+import Logo from "@/components/icons/Logo";
 import Navbar from "@/components/navigation/Navbar";
 import LinkButton from "@/components/ui/LinkButton";
+import { useUser } from "@clerk/nextjs";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Logo from "@/components/icons/Logo";
-import { UserButton, useUser } from "@clerk/nextjs";
-import ProfileDropdown from "@/components/dropdown/ProfileDropdown";
 
 const Header = () => {
     const { isSignedIn } = useUser();
@@ -22,7 +22,6 @@ const Header = () => {
                 <Navbar />
                 {isSignedIn ? (
                     <>
-                        <UserButton />
                         <ProfileDropdown className="h-10 w-10" />
                     </>
                 ) : (
