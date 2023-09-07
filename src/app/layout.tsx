@@ -3,7 +3,6 @@ import cn from "@/libs/cn";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import { Open_Sans, Roboto } from "next/font/google";
-import { ReactNode } from "react";
 
 const roboto = Roboto({
     weight: ["300", "400", "500", "700"],
@@ -24,7 +23,7 @@ export const metadata = {
 };
 
 interface Props {
-    children: ReactNode;
+    children: React.ReactNode;
 }
 
 const BaseLayout = ({ children }: Props) => {

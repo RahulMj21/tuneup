@@ -4,7 +4,7 @@ import LinkButton from "@/components/ui/LinkButton";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Logo from "@/components/icons/Logo";
-import { useUser } from "@clerk/nextjs";
+import { UserButton, useUser } from "@clerk/nextjs";
 import ProfileDropdown from "@/components/dropdown/ProfileDropdown";
 
 const Header = () => {
@@ -21,7 +21,10 @@ const Header = () => {
                 </Link>
                 <Navbar />
                 {isSignedIn ? (
-                    <ProfileDropdown className="h-10 w-10" />
+                    <>
+                        <UserButton />
+                        <ProfileDropdown className="h-10 w-10" />
+                    </>
                 ) : (
                     <LinkButton variant="outline" href="/sign-in">
                         Get Started
