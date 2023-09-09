@@ -25,8 +25,8 @@ const Header = () => {
                         <ProfileDropdown className="h-10 w-10" />
                     </>
                 ) : (
-                    <LinkButton variant="outline" href="/sign-in">
-                        Get Started
+                    <LinkButton size="medium" variant="outline" href="/sign-in">
+                        Sign In
                         <ArrowRight className="button-svg h-5 w-5" />
                     </LinkButton>
                 )}

@@ -10,12 +10,12 @@ interface Props
     href: string;
 }
 
-const LinkButton = ({ className, variant, href, ...props }: Props) => {
+const LinkButton = ({ className, variant, size, href, ...props }: Props) => {
     return (
         <Link
             role="button"
             href={href}
-            className={cn(buttonVariants({ variant, className }))}
+            className={cn(buttonVariants({ variant, className, size }))}
             {...props}
         />
     );
