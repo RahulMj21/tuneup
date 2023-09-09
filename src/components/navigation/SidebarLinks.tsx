@@ -5,9 +5,9 @@ import {
     CalendarCheck,
     Hourglass,
     LayoutDashboard,
-    ListChecks,
     MessagesSquare,
     Settings,
+    SquareKanban,
     Users,
 } from "lucide-react";
 import Link from "next/link";
@@ -22,7 +22,7 @@ export const SIDEBAR_LINKS = [
     {
         text: "Boards",
         href: "/boards",
-        icon: <ListChecks className="h-5 w-5" />,
+        icon: <SquareKanban className="h-5 w-5" />,
     },
     {
         text: "Chat",
