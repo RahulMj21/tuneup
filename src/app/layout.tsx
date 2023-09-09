@@ -1,13 +1,8 @@
 import "@/app/globals.css";
 import cn from "@/libs/cn";
-<<<<<<< HEAD
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import { Open_Sans, Roboto } from "next/font/google";
-=======
-import { Open_Sans, Roboto } from "next/font/google";
-import { ReactNode } from "react";
->>>>>>> a8dacf7 (Dev (#23))
 
 const roboto = Roboto({
     weight: ["300", "400", "500", "700"],
@@ -28,16 +23,11 @@ export const metadata = {
 };
 
 interface Props {
-<<<<<<< HEAD
     children: React.ReactNode;
-=======
-    children: ReactNode;
->>>>>>> a8dacf7 (Dev (#23))
 }
 
 const BaseLayout = ({ children }: Props) => {
     return (
-<<<<<<< HEAD
         <ClerkProvider appearance={{ baseTheme: dark }}>
             <html lang="en" className={cn(roboto.variable, open_sans.variable)}>
                 <body>
@@ -47,15 +37,6 @@ const BaseLayout = ({ children }: Props) => {
                 </body>
             </html>
         </ClerkProvider>
-=======
-        <html lang="en" className={cn(roboto.variable, open_sans.variable)}>
-            <body>
-                <div className="min-h-screen w-full overflow-x-hidden">
-                    {children}
-                </div>
-            </body>
-        </html>
->>>>>>> a8dacf7 (Dev (#23))
     );
 };
 
