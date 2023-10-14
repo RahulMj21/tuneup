@@ -1,10 +1,11 @@
 import CustomSearchInput from "@/components/formControls/CustomSearchInput";
 import { Edit, Group, Pin } from "lucide-react";
 import ChatGroup from "@/scenes/chatPage/ChatGroup";
+import ResizableSidebar from "@/components/common/ResizableSidebar";
 
 const ChatBar = () => {
     return (
-        <div className="w-60 border-r border-gray-5 pt-6 flex flex-col gap-6 overflow-hidden">
+        <ResizableSidebar>
             <div className="flex items-center justify-between gap-4 px-3">
                 <h3>Messages</h3>
                 <Edit className="h-4 w-4 text-light-3" />
@@ -25,7 +26,7 @@ const ChatBar = () => {
                 />
                 <ChatGroup title="All Messages" />
             </div>
-        </div>
+        </ResizableSidebar>
     );
 };
 
