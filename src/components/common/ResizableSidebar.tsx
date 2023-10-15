@@ -23,6 +23,7 @@ const ResizableSidebar = ({ children }: Props) => {
 
         if (cw > 200 && cw < 500) {
             sidebarRef.current.style.width = `${cw}px`;
+            setToggle(false);
         } else if (cw < 200) {
             sidebarRef.current.style.width = `0px`;
             setToggle(true);
