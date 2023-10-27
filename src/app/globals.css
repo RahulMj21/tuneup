@@ -99,6 +99,13 @@
     a:focus-visible {
         @apply outline-none ring-2 ring-focus-1;
     }
+    ol,
+    ul {
+        @apply px-6 list-disc;
+    }
+    ol {
+        @apply list-decimal;
+    }
 }
 
 @layer components {
@@ -119,6 +126,11 @@
 /* home page */
 .hero-heading {
     @apply text-[12.5vw] xl:text-[10rem] leading-[12.5vw] xl:leading-[10rem] font-normal whitespace-nowrap;
+}
+
+/* single chat page */
+.tiptap p {
+    @apply text-light-2;
 }
 
 /* auth page */
