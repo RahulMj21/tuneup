@@ -19,7 +19,7 @@ const ChatToolbar = ({ editor }: Props) => {
     if (!editor) return null;
 
     return (
-        <div className="border border-gray-3 bg-dark-1 rounded-md px-2 flex items-center gap-2">
+        <div className="flex items-center gap-1 px-1">
             <Toggle
                 size="sm"
                 pressed={editor.isActive("bold")}
@@ -27,7 +27,7 @@ const ChatToolbar = ({ editor }: Props) => {
                     editor.chain().focus().toggleBold().run()
                 }
             >
-                <Bold className="h-4 w-4" />
+                <Bold className="h-[0.875rem] w-[0.875rem]" />
             </Toggle>
             <Toggle
                 size="sm"
@@ -36,7 +36,7 @@ const ChatToolbar = ({ editor }: Props) => {
                     editor.chain().focus().toggleItalic().run()
                 }
             >
-                <Italic className="h-4 w-4" />
+                <Italic className="h-[0.875rem] w-[0.875rem]" />
             </Toggle>
             <Toggle
                 size="sm"
@@ -45,7 +45,7 @@ const ChatToolbar = ({ editor }: Props) => {
                     editor.chain().focus().toggleStrike().run()
                 }
             >
-                <Strikethrough className="h-4 w-4" />
+                <Strikethrough className="h-[0.875rem] w-[0.875rem]" />
             </Toggle>
             <Toggle
                 size="sm"
@@ -54,7 +54,7 @@ const ChatToolbar = ({ editor }: Props) => {
                     editor.chain().focus().toggleOrderedList().run()
                 }
             >
-                <ListOrdered className="h-4 w-4" />
+                <ListOrdered className="h-[0.875rem] w-[0.875rem]" />
             </Toggle>
             <Toggle
                 size="sm"
@@ -63,16 +63,16 @@ const ChatToolbar = ({ editor }: Props) => {
                     editor.chain().focus().toggleBulletList().run()
                 }
             >
-                <List className="h-4 w-4" />
+                <List className="h-[0.875rem] w-[0.875rem]" />
             </Toggle>
             <Toggle
                 size="sm"
                 pressed={editor.isActive("codeBlock")}
                 onPressedChange={() =>
-                    editor.chain().focus().toggleCode().run()
+                    editor.chain().focus().toggleCodeBlock().run()
                 }
             >
-                <Code className="h-4 w-4" />
+                <Code className="h-[0.875rem] w-[0.875rem]" />
             </Toggle>
         </div>
     );

@@ -1,10 +1,12 @@
 "use client";
 
-import { useEditor, EditorContent } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
 import Toolbar from "@/scenes/singleChatPage/ChatToolbar";
-import OrderedList from "@tiptap/extension-ordered-list";
+import CodeBlock from "@tiptap/extension-code-block";
 import ListItem from "@tiptap/extension-list-item";
+import OrderedList from "@tiptap/extension-ordered-list";
+import Placeholder from "@tiptap/extension-placeholder";
+import { EditorContent, useEditor } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
 
 const ChatInput = () => {
     const editor = useEditor({
@@ -12,11 +14,20 @@ const ChatInput = () => {
             StarterKit.configure(),
             OrderedList.configure({ keepMarks: true }),
             ListItem,
+            CodeBlock.configure({
+                HTMLAttributes: {
+                    class: "bg-gray-4 text-[0.875rem] p-2 text-yellow-3 rounded-md",
+                },
+            }),
+            Placeholder.configure({
+                placeholder: "Message Rahul...",
+                includeChildren: true,
+            }),
         ],
 
         editorProps: {
             attributes: {
-                class: "min-h-[3.5rem] max-h-[6rem] overflow-y-auto rounded-md border border-gray-3 p-2 outline-none bg-dark-1",
+                class: "text-[0.875rem] min-h-[2rem] max-h-[6rem] overflow-y-auto py-2 px-4 outline-none",
             },
         },
         onUpdate: ({ editor }) => console.log(editor.getHTML()),
@@ -24,8 +35,11 @@ const ChatInput = () => {
 
     return (
         <div className="flex flex-col w-full gap-2 px-5 pb-2">
-            <Toolbar editor={editor} />
-            <EditorContent editor={editor} />
+            <div className="rounded-lg border border-gray-5 bg-dark-1">
+                <Toolbar editor={editor} />
+                <EditorContent editor={editor} />
+                <Toolbar editor={editor} />
+            </div>
         </div>
     );
 };
