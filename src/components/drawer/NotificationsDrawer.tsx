@@ -29,7 +29,7 @@ const NotificationsDrawer = () => {
                 </div>
             </DrawerTrigger>
             <DrawerContent {...{ open, onClose }}>
-                <h4 className="px-4">Notifications</h4>
+                <h3 className="px-4 pt-1 pb-7 tracking-wide">Notifications</h3>
             </DrawerContent>
         </>
     );
