@@ -13,7 +13,7 @@ const ChatItem = ({ hasNew }: Props) => {
             <UserAvatar src="https://github.com/shadcn.png" fallback="RM" />
             <div className="flex-1 flex flex-col gap-[0.4rem]">
                 <p className="text-light-2 leading-4 text-[0.938rem]">
-                    Radhe Shyam
+                    Rahul Mondal
                 </p>
                 <span className="text-gray-1 text-[0.813rem] font-semibold leading-3">
                     02:45 pm

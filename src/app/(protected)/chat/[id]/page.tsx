@@ -1,6 +1,6 @@
 import ChatFeed from "@/scenes/singleChatPage/ChatFeed";
 import ChatHeader from "@/scenes/singleChatPage/ChatHeader";
-// import ChatInput from "@/scenes/singleChatPage/ChatInput";
+import ChatInput from "@/scenes/singleChatPage/ChatInput";
 
 const SingleChatPage = () => {
     return (
@@ -10,7 +10,7 @@ const SingleChatPage = () => {
         >
             <ChatFeed />
             <ChatHeader />
-            {/* <ChatInput /> */}
+            <ChatInput />
         </section>
     );
 };

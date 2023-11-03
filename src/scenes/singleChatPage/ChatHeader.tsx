@@ -14,7 +14,7 @@ const ChatHeader = () => {
                     className="h-11 w-11"
                 />
                 <div className="flex flex-col">
-                    <h5 className="text-[0.938rem]">Radhe Shyam</h5>
+                    <h5 className="text-[0.938rem]">Rahul Mondal</h5>
                     <span className="text-[0.7rem] text-blue-2 font-semibold tracking-wide cursor-pointer">
                         22 Members
                     </span>
