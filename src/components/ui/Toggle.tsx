@@ -6,18 +6,18 @@ import { cva, type VariantProps } from "class-variance-authority";
 import cn from "@/libs/cn";
 
 const toggleVariants = cva(
-    "flex items-center gap-2 transform duration-200 rounded-full font-medium border-2 border-transparent whitespace-nowrap hover:shadow-lg active:scale-[0.97] group cursor-pointer",
+    "flex items-center gap-2 transform duration-200 rounded-lg font-medium border-2 border-transparent whitespace-nowrap hover:shadow-lg active:scale-[0.97] group cursor-pointer text-light-4 data-[state=on]:text-light-2 data-[state=on]:bg-dark-3",
     {
         variants: {
             variant: {
-                default: "bg-transparent",
+                default: "",
                 outline:
                     "bg-transparent text-light-2 border-current border-[1.5px] border-opacity-50",
             },
             size: {
-                default: "h-10 px-3",
-                sm: "h-8 px-2",
-                lg: "h-11 px-5",
+                default: "p-3",
+                sm: "p-2",
+                lg: "p-5",
             },
         },
         defaultVariants: {

@@ -1,5 +1,6 @@
 "use client";
 
+import ChatActions from "@/scenes/singleChatPage/ChatActions";
 import Toolbar from "@/scenes/singleChatPage/ChatToolbar";
 import CodeBlock from "@tiptap/extension-code-block";
 import ListItem from "@tiptap/extension-list-item";
@@ -16,7 +17,7 @@ const ChatInput = () => {
             ListItem,
             CodeBlock.configure({
                 HTMLAttributes: {
-                    class: "bg-gray-4 text-[0.875rem] p-2 text-yellow-3 rounded-md",
+                    class: "bg-gray-4 text-[0.875rem] p-2 text-light-2 rounded-md",
                 },
             }),
             Placeholder.configure({
@@ -27,7 +28,7 @@ const ChatInput = () => {
 
         editorProps: {
             attributes: {
-                class: "text-[0.875rem] min-h-[2rem] max-h-[6rem] overflow-y-auto py-2 px-4 outline-none",
+                class: "text-[0.875rem] min-h-[2rem] max-h-[6rem] overflow-y-auto py-2 px-[0.875rem] outline-none",
             },
         },
         onUpdate: ({ editor }) => console.log(editor.getHTML()),
@@ -38,7 +39,7 @@ const ChatInput = () => {
             <div className="rounded-lg border border-gray-5 bg-dark-1">
                 <Toolbar editor={editor} />
                 <EditorContent editor={editor} />
-                <Toolbar editor={editor} />
+                <ChatActions />
             </div>
         </div>
     );

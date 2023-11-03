@@ -19,9 +19,10 @@ const ChatToolbar = ({ editor }: Props) => {
     if (!editor) return null;
 
     return (
-        <div className="flex items-center gap-1 px-1">
+        <div className="flex items-center gap-1 p-1">
             <Toggle
                 size="sm"
+                className="p-[0.375rem]"
                 pressed={editor.isActive("bold")}
                 onPressedChange={() =>
                     editor.chain().focus().toggleBold().run()
@@ -31,6 +32,7 @@ const ChatToolbar = ({ editor }: Props) => {
             </Toggle>
             <Toggle
                 size="sm"
+                className="p-[0.375rem]"
                 pressed={editor.isActive("italic")}
                 onPressedChange={() =>
                     editor.chain().focus().toggleItalic().run()
@@ -40,6 +42,7 @@ const ChatToolbar = ({ editor }: Props) => {
             </Toggle>
             <Toggle
                 size="sm"
+                className="p-[0.375rem]"
                 pressed={editor.isActive("strike")}
                 onPressedChange={() =>
                     editor.chain().focus().toggleStrike().run()
@@ -49,6 +52,7 @@ const ChatToolbar = ({ editor }: Props) => {
             </Toggle>
             <Toggle
                 size="sm"
+                className="p-[0.375rem]"
                 pressed={editor.isActive("orderedList")}
                 onPressedChange={() =>
                     editor.chain().focus().toggleOrderedList().run()
@@ -58,6 +62,7 @@ const ChatToolbar = ({ editor }: Props) => {
             </Toggle>
             <Toggle
                 size="sm"
+                className="p-[0.375rem]"
                 pressed={editor.isActive("bulletList")}
                 onPressedChange={() =>
                     editor.chain().focus().toggleBulletList().run()
@@ -67,6 +72,7 @@ const ChatToolbar = ({ editor }: Props) => {
             </Toggle>
             <Toggle
                 size="sm"
+                className="p-[0.375rem]"
                 pressed={editor.isActive("codeBlock")}
                 onPressedChange={() =>
                     editor.chain().focus().toggleCodeBlock().run()
