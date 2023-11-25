@@ -1,14 +1,14 @@
 module.exports = {
     // Type check TypeScript files
-    "**/*.(ts|tsx)": () => "npx tsc --noEmit",
+    "**/*.(ts|tsx)": () => "pnpm exec tsc --noEmit",
 
     // Lint then format TypeScript and JavaScript files
     "**/*.(ts|tsx|js)": (filenames) => [
-        `npx eslint --fix ${filenames.join(" ")}`,
-        `npx prettier --write ${filenames.join(" ")}`,
+        `pnpm dlx eslint --fix ${filenames.join(" ")}`,
+        `pnpm dlx prettier --write ${filenames.join(" ")}`,
     ],
 
     // Format MarkDown and JSON
     "**/*.(md|json)": (filenames) =>
-        `npx prettier --write ${filenames.join(" ")}`,
+        `pnpm dlx prettier --write ${filenames.join(" ")}`,
 };

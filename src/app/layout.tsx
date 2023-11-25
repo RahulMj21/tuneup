@@ -1,3 +1,4 @@
+import Provider from "@/app/_trpc/Provider";
 import "@/app/globals.css";
 import cn from "@/libs/cn";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -29,13 +30,18 @@ interface Props {
 const BaseLayout = ({ children }: Props) => {
     return (
         <ClerkProvider appearance={{ baseTheme: dark }}>
-            <html lang="en" className={cn(roboto.variable, open_sans.variable)}>
-                <body>
-                    <div className="min-h-screen w-full overflow-x-hidden">
-                        {children}
-                    </div>
-                </body>
-            </html>
+            <Provider>
+                <html
+                    lang="en"
+                    className={cn(roboto.variable, open_sans.variable)}
+                >
+                    <body>
+                        <div className="min-h-screen w-full overflow-x-hidden">
+                            {children}
+                        </div>
+                    </body>
+                </html>
+            </Provider>
         </ClerkProvider>
     );
 };
