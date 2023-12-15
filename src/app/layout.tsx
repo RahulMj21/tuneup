@@ -1,8 +1,6 @@
 import Provider from "@/app/_trpc/Provider";
 import "@/app/globals.css";
 import cn from "@/libs/cn";
-import { ClerkProvider } from "@clerk/nextjs";
-import { dark } from "@clerk/themes";
 import { Open_Sans, Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -29,20 +27,15 @@ interface Props {
 
 const BaseLayout = ({ children }: Props) => {
     return (
-        <ClerkProvider appearance={{ baseTheme: dark }}>
-            <Provider>
-                <html
-                    lang="en"
-                    className={cn(roboto.variable, open_sans.variable)}
-                >
-                    <body>
-                        <div className="min-h-screen w-full overflow-x-hidden">
-                            {children}
-                        </div>
-                    </body>
-                </html>
-            </Provider>
-        </ClerkProvider>
+        <Provider>
+            <html lang="en" className={cn(roboto.variable, open_sans.variable)}>
+                <body>
+                    <div className="min-h-screen w-full overflow-x-hidden">
+                        {children}
+                    </div>
+                </body>
+            </html>
+        </Provider>
     );
 };
 

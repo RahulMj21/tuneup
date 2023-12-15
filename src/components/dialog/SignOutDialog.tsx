@@ -9,7 +9,7 @@ import {
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/Dialog";
-import { useAuth } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 import { Dispatch, SetStateAction, useState } from "react";
 
 interface Props {
@@ -18,19 +18,13 @@ interface Props {
 }
 
 const SignOutDialog = ({ open, setOpen }: Props) => {
-    const [isLoading, setIsLoading] = useState(false);
-    const { signOut } = useAuth();
+    const [isLoading] = useState(false);
+    const router = useRouter();
 
     const onClose = () => setOpen(false);
 
     const handleSignOut = () => {
-        setIsLoading(true);
-        signOut()
-            .catch((error) => error)
-            .finally(() => {
-                setIsLoading(false);
-                onClose();
-            });
+        router.push("/");
     };
 
     return (

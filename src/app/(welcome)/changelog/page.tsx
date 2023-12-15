@@ -1,8 +1,8 @@
 import ComingSoon from "@/components/common/ComingSoon";
 
-const ContactPage = () => {
+const ChangeLog = () => {
     return (
-        <section title="contact">
+        <section title="changelog">
             <div className="custom-container py-4">
                 <ComingSoon />
             </div>
@@ -10,4 +10,4 @@ const ContactPage = () => {
     );
 };
 
-export default ContactPage;
+export default ChangeLog;

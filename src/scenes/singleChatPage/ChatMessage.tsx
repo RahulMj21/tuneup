@@ -10,7 +10,7 @@ const ChatMessage = ({ userName, message }: Props) => {
     return (
         <div className="flex gap-2">
             <UserAvatar
-                src="https://avatars.githubusercontent.com/u/77981238?s=400&u=b21bc0441702510ebe48b88bdeaaeccbfda0201e&v=4"
+                src="https://github.com/rahulmj21.png"
                 fallback="RS"
                 className="w-12 h-12"
             />

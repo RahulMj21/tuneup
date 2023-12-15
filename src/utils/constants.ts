@@ -5,7 +5,7 @@ export const LINKS = [
     { text: "Dashboard", href: "/dashboard" },
     { text: "Pricing", href: "/pricing" },
     { text: "Support", href: "/support" },
-    { text: "Contact", href: "/contact" },
+    { text: "Changelog", href: "/changelog" },
 ];
 
 export const PLAN_ITEMS: IPlan[] = [

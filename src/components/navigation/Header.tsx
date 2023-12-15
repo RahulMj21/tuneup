@@ -2,14 +2,11 @@
 import ProfileDropdown from "@/components/dropdown/ProfileDropdown";
 import Logo from "@/components/icons/Logo";
 import Navbar from "@/components/navigation/Navbar";
-import LinkButton from "@/components/ui/LinkButton";
-import { useUser } from "@clerk/nextjs";
-import { ArrowRight } from "lucide-react";
+// import LinkButton from "@/components/ui/LinkButton";
+// import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const Header = () => {
-    const { isSignedIn } = useUser();
-
     return (
         <header
             title="header"
@@ -20,16 +17,11 @@ const Header = () => {
                     <Logo height={38} width={44} />
                 </Link>
                 <Navbar />
-                {isSignedIn ? (
-                    <>
-                        <ProfileDropdown className="h-10 w-10" />
-                    </>
-                ) : (
-                    <LinkButton size="medium" variant="outline" href="/sign-in">
-                        Sign In
-                        <ArrowRight className="button-svg h-5 w-5" />
-                    </LinkButton>
-                )}
+                <ProfileDropdown className="h-10 w-10" />
+                {/* <LinkButton size="medium" variant="outline" href="/sign-in">
+                    Sign In
+                    <ArrowRight className="button-svg h-5 w-5" />
+                </LinkButton> */}
             </div>
         </header>
     );

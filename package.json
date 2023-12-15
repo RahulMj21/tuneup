@@ -11,8 +11,6 @@
         "validate": "npx tsc --noEmit &&  npx eslint . && npx prettier --write ."
     },
     "dependencies": {
-        "@clerk/nextjs": "^4.23.3",
-        "@clerk/themes": "^1.7.5",
         "@radix-ui/react-accordion": "^1.1.2",
         "@radix-ui/react-avatar": "^1.0.3",
         "@radix-ui/react-dialog": "^1.0.4",

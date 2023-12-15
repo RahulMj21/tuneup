@@ -15,9 +15,9 @@ import { usePathname } from "next/navigation";
 
 export const SIDEBAR_LINKS = [
     {
-        text: "Dashboard",
-        href: "/dashboard",
-        icon: <LayoutDashboard className="h-5 w-5" />,
+        text: "Chat",
+        href: "/chat",
+        icon: <MessagesSquare className="h-5 w-5" />,
     },
     {
         text: "Boards",
@@ -25,9 +25,9 @@ export const SIDEBAR_LINKS = [
         icon: <SquareKanban className="h-5 w-5" />,
     },
     {
-        text: "Chat",
-        href: "/chat",
-        icon: <MessagesSquare className="h-5 w-5" />,
+        text: "Dashboard",
+        href: "/dashboard",
+        icon: <LayoutDashboard className="h-5 w-5" />,
     },
     {
         text: "Events",

@@ -14,7 +14,7 @@ const Sidebar = ({ className, ...props }: HTMLAttributes<HTMLDivElement>) => {
             )}
             {...props}
         >
-            <Link href="/">
+            <Link href="/chat">
                 <Logo height={35} width={40} />
             </Link>
             <SidebarLinks />
