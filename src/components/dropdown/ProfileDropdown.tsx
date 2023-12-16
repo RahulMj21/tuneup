@@ -9,7 +9,6 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu";
-import { useClerk } from "@clerk/nextjs";
 import { Activity, ArrowRightLeft, LogOut, User } from "lucide-react";
 import { useState } from "react";
 
@@ -19,7 +18,6 @@ interface Props {
 
 const ProfileDropdown = ({ className }: Props) => {
     const [open, setOpen] = useState(false);
-    const { openUserProfile, loaded, user } = useClerk();
 
     return (
         <>
@@ -28,8 +26,8 @@ const ProfileDropdown = ({ className }: Props) => {
                 <DropdownMenuTrigger className="rounded-full">
                     <UserAvatar
                         className={className}
-                        src={loaded && user ? user.imageUrl : ""}
-                        fallback=""
+                        src="https://github.com/rahulmj21.png"
+                        fallback="RM"
                     />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="min-w-[12rem]">
@@ -38,7 +36,7 @@ const ProfileDropdown = ({ className }: Props) => {
                     </DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <div className="flex flex-col gap-1">
-                        <DropdownMenuItem onClick={() => openUserProfile()}>
+                        <DropdownMenuItem onClick={() => true}>
                             <User className="h-5 w-5" />
                             Profile
                         </DropdownMenuItem>

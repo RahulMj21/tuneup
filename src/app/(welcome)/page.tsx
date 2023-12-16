@@ -2,7 +2,7 @@ import Blob from "@/components/common/Blob";
 import LinkButton from "@/components/ui/LinkButton";
 import { ArrowRight } from "lucide-react";
 
-const HomePage = () => {
+const HomePage = async () => {
     return (
         <>
             <Blob />

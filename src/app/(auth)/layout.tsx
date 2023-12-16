@@ -4,7 +4,7 @@ interface Props {
     children: ReactNode;
 }
 
-const WelcomeLayout = ({ children }: Props) => {
+const AuthLayout = ({ children }: Props) => {
     return (
         <main className="min-h-[calc(100vh-6rem)] flex items-center justify-center">
             {children}
@@ -12,4 +12,4 @@ const WelcomeLayout = ({ children }: Props) => {
     );
 };
 
-export default WelcomeLayout;
+export default AuthLayout;
