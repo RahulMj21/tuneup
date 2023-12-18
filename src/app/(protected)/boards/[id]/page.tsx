@@ -1,5 +1,6 @@
 import BoardBottom from "@/scenes/singleBoardPage/BoardBottom";
 import BoardTop from "@/scenes/singleBoardPage/BoardTop";
+import { Suspense } from "react";
 
 const SingleBoardPage = () => {
     return (
@@ -8,7 +9,9 @@ const SingleBoardPage = () => {
             className="px-4 pt-6 flex-1 flex flex-col gap-5 overflow-x-hidden"
         >
             <BoardTop />
-            <BoardBottom />
+            <Suspense fallback={<></>}>
+                <BoardBottom />
+            </Suspense>
         </section>
     );
 };

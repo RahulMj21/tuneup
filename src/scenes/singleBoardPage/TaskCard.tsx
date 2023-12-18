@@ -1,10 +1,11 @@
 "use client";
 
-import TaskAssignees from "@/scenes/singleBoardPage/TaskAssignees";
-import { IconButton } from "@/components/ui/IconButton";
-import { IUser } from "@/types";
-import { MessageCircle, MoreVertical, Paperclip } from "lucide-react";
 import TaskDetailsDialog from "@/components/dialog/TaskDetailsDialog";
+import { IconButton } from "@/components/ui/IconButton";
+import TaskAssignees from "@/scenes/singleBoardPage/TaskAssignees";
+import { IUser } from "@/types";
+import { ITask } from "@/types/board.types";
+import { MessageCircle, MoreVertical, Paperclip } from "lucide-react";
 import { useState } from "react";
 
 const USERS: IUser[] = [
@@ -13,7 +14,11 @@ const USERS: IUser[] = [
     { id: "3", avatarUrl: "https://github.com/shadcn.png" },
 ];
 
-const TaskCard = () => {
+interface Props {
+    task: ITask;
+}
+
+const TaskCard = ({ task }: Props) => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -26,15 +31,14 @@ const TaskCard = () => {
                 <div className="px-2 flex flex-col gap-1 border-b border-gray-5 pb-3">
                     <div className="flex items-center justify-between">
                         <h5 className="text-light-2 tracking-wide">
-                            Task Title
+                            {task.title}
                         </h5>
                         <IconButton className="opacity-0 group-hover/card:opacity-100">
                             <MoreVertical className="h-4 w-4" />
                         </IconButton>
                     </div>
                     <p className="text-light-4 text-[0.938rem] leading-[1.1rem] tracking-normal">
-                        This is the task description. As you can see it is quite
-                        easy to understand
+                        {task.description}
                     </p>
                 </div>
                 <div className="flex items-center justify-between pt-2 px-2">
