@@ -40,7 +40,7 @@ const BoardTopics = () => {
         >
             <div
                 ref={barRef}
-                className="absolute bg-dark-2 w-0 h-9 rounded-md transition-all pointer-events-none"
+                className="absolute bg-dark-2 w-0 h-9 rounded-md transition-all pointer-events-none duration-500"
             />
             {BOARD_TOPICS.map(({ text, topic }) => (
                 <Button

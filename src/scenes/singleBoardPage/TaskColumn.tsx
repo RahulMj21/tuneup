@@ -12,30 +12,46 @@ interface Props {
 
 const TaskColumn = ({ column }: Props) => {
     const { title, id } = column;
-    const { setNodeRef, attributes, listeners, transform, transition } =
-        useSortable({
-            id: id,
-            data: {
-                type: "Column",
-                column,
-            },
-        });
+    const {
+        setNodeRef,
+        attributes,
+        listeners,
+        transform,
+        transition,
+        isDragging,
+    } = useSortable({
+        id: id,
+        data: {
+            type: "Column",
+            column,
+        },
+    });
 
     const style = {
         transition,
         transform: CSS.Transform.toString(transform),
+        zIndex: isDragging ? 999 : 1,
     };
+
+    if (isDragging)
+        return (
+            <div
+                ref={setNodeRef}
+                style={style}
+                className="w-64 flex flex-col gap-1 bg-dark-4 rounded-md border-2 border-error-2 opacity-90"
+            />
+        );
 
     return (
         <div
             ref={setNodeRef}
             style={style}
-            className="w-60 flex flex-col gap-1"
+            className="w-64 flex flex-col gap-1 bg-dark-1"
         >
             <div
                 {...attributes}
                 {...listeners}
-                className="flex items-center justify-between"
+                className="flex items-center justify-between px-1 cursor-move"
             >
                 <p className="text-light-3 flex items-center gap-1 text-[0.835rem]">
                     <Circle className="stroke-transparent h-2 w-2 fill-error-1" />
